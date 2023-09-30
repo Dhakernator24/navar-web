@@ -21,10 +21,10 @@ function MainNavBar() {
     setShow(false);
   }
 
-  const CustomDropdown = React.forwardRef(({ children }, ref) => (
-    <div className='dropdown nav-item dropdown-custom menu-item-custom'
+  const CustomDropdownMenu = React.forwardRef(({ children }, ref) => (
+    <div className='dropdown-menu'
       ref={ref}
-      >
+    >
       {children}
     </div>
   ));
@@ -67,6 +67,44 @@ function MainNavBar() {
               onMouseLeave={hideDropdown}
             >
               <Dropdown.Toggle as={CustomDropdownToggle}>Services</Dropdown.Toggle>
+              <Dropdown.Menu className='dropdown-menu' >
+                <Dropdown.Item as={CustomDropdownItem} href="/devops-solutions">
+                  <div className='dropdown-item-custom-text'>DevOps Solutions</div>
+                </Dropdown.Item>
+                <Dropdown.Divider />
+                <Dropdown.Item as={CustomDropdownItem} href="/cloud-solutions">
+                  <div className='dropdown-item-custom-text'>Cloud Consulting</div>
+                </Dropdown.Item>
+                <Dropdown.Divider />
+                <Dropdown.Item as={CustomDropdownItem} href="/web-development">
+                  <div className='dropdown-item-custom-text'>Web Development</div>
+                </Dropdown.Item>
+                <Dropdown.Divider />
+                <Dropdown.Item as={CustomDropdownItem} href="/others">
+                  <div className='dropdown-item-custom-text'>Others</div>
+                </Dropdown.Item>
+              </Dropdown.Menu>
+            </Dropdown>
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
+    /*
+    <Navbar className='navBar mainNavBar' sticky="top" expand="lg">
+      <Container className='container-custom'>
+        <Navbar.Brand href="/">
+          <img src={logo} className='logo' />
+        </Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="">
+            <Dropdown
+              className='dropdown-custom menu-item-custom'
+              show={show}
+              onMouseEnter={showDropdown}
+              onMouseLeave={hideDropdown}
+            >
+              <Dropdown.Toggle as={CustomDropdownToggle}>Services</Dropdown.Toggle>
               <Dropdown.Menu className='dropdown-menu'>
                 <Dropdown.Item as={CustomDropdownItem} href="/devops-solutions">
                   <div className='dropdown-item-custom-text'>DevOps Solutions</div>
@@ -93,6 +131,7 @@ function MainNavBar() {
         </Navbar.Collapse>
       </Container>
     </Navbar>
+    */
   );
 
 }
