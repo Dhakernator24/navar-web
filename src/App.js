@@ -14,7 +14,7 @@ import NavbarTail from './Navigation/NavBarTail';
 function App() {
   return (
     <Router className="bg-black">
-      <NavbarTail/>
+			<NavbarTail/>
       <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/devops-solutions' element={<Devops/>} />

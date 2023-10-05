@@ -9,13 +9,12 @@ function ImageHero() {
 			style={{
 				backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${image_good})`
 			}}
-			className="relative h-1/2 w-auto max-w-max mx-auto bg-cover 
-			bg-center bg-no-repeat text-white bg-gradient-to-r from-black-250 to-black-250 shadow-2xl
-			min-h-min">
-			<div className="absolute inset-0 flex items-center justify-center pb-20">
-				<div className="text-center">
-					<h1 className="text-7xl font-oxygen font-light mb-4">Software Consultants</h1>
-					<p className="text-2xl font-oxygen">Ready to take your business to the next level?</p>
+			className="my-[80px] h-3/5 w-auto max-w-max mx-auto bg-cover 
+			bg-center bg-no-repeat text-white">
+			<div className="flex h-full w-full justify-start items-end lg:pl-20 md:pl-5 sm:pl-0 pb-28">
+				<div className="text-center  bg-logo rounded-md p-2">
+					<h1 className="text-7xl text-logo-white font-oxygen font-light mb-4">Software Specialists</h1>
+					<p className="text-2xl text-logo-second font-oxygen">Your business matters</p>
 				</div>
 			</div>
 		</div>

@@ -41,8 +41,8 @@ export default function Example() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
-    <header className="bg-white">
-      <nav className="mx-auto text-logo-main flex items-center justify-between h-auto px-3 lg:px-8" aria-label="Global">
+    <div className="bg-white fixed top-0 w-full">
+      <nav className="sticky top-0 mx-auto text-logo-main flex items-center justify-between h-auto px-3 lg:px-8" aria-label="Global">
         {
           //logo
         }
@@ -90,7 +90,7 @@ export default function Example() {
               leaveTo="opacity-0 translate-y-1"
             >
               <Popover.Panel className="absolute -left-8 top-full z-10 mt-0 w-screen max-w-md 
-                overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5">
+                overflow-hidden rounded-3xl bg-logo-white shadow-lg ring-1 ring-gray-900/5">
                 <div className="p-4">
                   {products.map((item) => (
                     <div
@@ -219,6 +219,6 @@ export default function Example() {
           </div>
         </Dialog.Panel>
       </Dialog>
-    </header>
+    </div>
   )
 }

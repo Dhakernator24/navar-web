@@ -18,11 +18,22 @@ module.exports = {
       },
       colors: {
         'logo': {
-          //DEFAULT: '#00283f',
+          DEFAULT: '#00283f',
           'main': '#00283e',
           'second': '#00d397',
           'light': '#9faeb7',
-          'secLight': '#bff4e5'
+          'secLight': '#bff4e5',
+          'white': '#ffffff'
+        }
+      },
+      borderColors:{
+        'logo': {
+          DEFAULT: '#00283f',
+          'main': '#00283e',
+          'second': '#00d397',
+          'light': '#9faeb7',
+          'secLight': '#bff4e5',
+          'white': '#ffffff'
         }
       },
     },
