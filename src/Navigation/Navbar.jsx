@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
 import Dropdown from 'react-bootstrap/Dropdown';
-import './MainNavBar.scss'
+import './Navbar.scss'
 import logo from '../assets/logo_busta_1.jpeg';
 import jenkins from '../assets/jenkins.svg';
 import aws from '../assets/aws.png';
@@ -12,7 +11,7 @@ import { NavDropdown, NavItem, NavLink } from 'react-bootstrap';
 import { CaretDownFill, CaretDown, ThreeDotsVertical } from 'react-bootstrap-icons';
 
 
-function MainNavBar() {
+function Navbar() {
   const [show, setShow] = useState(false);
   const showDropdown = (e) => {
     setShow(true);
@@ -52,6 +51,31 @@ function MainNavBar() {
   ));
 
   return (
+    <nav class="navbar navbar-expand-lg navbarCustom">
+      <a class="navbar-brand" href="#">
+        <img src={logo} className='logo' />
+      </a>
+
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+          <a class="nav-item nav-link" href="#">Solutions</a>
+          <a class="nav-item nav-link" href="#">Contact</a>
+          <a class="nav-item nav-link" href="#">About Us</a>
+        </div>
+      </div>
+
+      <a class="contact">
+        (540)470-1142
+      </a>
+    </nav>
+  );
+
+}
+
+export default Navbar;
+
+    /*
     <Navbar className='navBar mainNavBar' sticky="top" expand="lg">
       <Container className='container-custom'>
         <Navbar.Brand href="/">
@@ -89,7 +113,6 @@ function MainNavBar() {
         </Navbar.Collapse>
       </Container>
     </Navbar>
-    /*
     <Navbar className='navBar mainNavBar' sticky="top" expand="lg">
       <Container className='container-custom'>
         <Navbar.Brand href="/">
@@ -132,8 +155,3 @@ function MainNavBar() {
       </Container>
     </Navbar>
     */
-  );
-
-}
-
-export default MainNavBar;
