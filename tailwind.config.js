@@ -21,6 +21,7 @@ module.exports = {
           DEFAULT: '#00283f',
           'main': '#00283e',
           'second': '#00d397',
+          'secondDark': '#00845e',
           'light': '#9faeb7',
           'secLight': '#bff4e5',
           'white': '#ffffff'
