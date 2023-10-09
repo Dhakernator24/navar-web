@@ -60,10 +60,10 @@ function Services() {
 
 
 	return (
-		<div className="w-full h-full bg-white font-oxygen p-10">
+		<div className="w-full h-full bg-white font-oxygen overflow-hidden px-10">
 			<div className="container mx-auto">
 				<div>
-					<div className="text-center my-10">
+					<div className="text-center mb-10">
 						<h1 className="font-oxygen text-4xl text-logo-main">
 							Our Services
 						</h1>

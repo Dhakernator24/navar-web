@@ -11,7 +11,7 @@ function ServiceCard({ name, subtitle, description, iconS, href }) {
 
 	return (
 		<div
-			className="rounded-lg bg-logo-white text-center border-[1px] border-logo-second font-oxygen w-full lg:hover:shadow-2xl lg:hover:scale-105 transition duration-200 ease-in"
+			className="rounded-lg overflow-hidden bg-logo-white text-center border-[1px] border-logo-second font-oxygen w-full lg:hover:shadow-2xl transition duration-200 ease-in"
 		>
 			<div className="w-full pt-3 pb-2 border-b border-logo-second">
 				<h2 className="font-bold text-3xl text-logo-main">

@@ -9,13 +9,15 @@ import Others from './pages/Others'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import "bootstrap/dist/css/bootstrap.min.css";
 import Navbar from './Navigation/NavBar';
-import Footer from './components/Footer';
+import Footer from './Navigation/Footer';
+import { Fragment, useState } from 'react'
 
 function App() {
+  const [current, setCurrent] = useState("home");
   return (
   <div className='h-full'>
     <Router className="bg-black">
-      <Navbar />
+      <Navbar current={current} setCurrent={(current) => setCurrent(current)}/>
       <Routes>
         <Route path='/navar-web' element={<Home />} />
         <Route path='navar-web/devops' element={<Devops />} />
@@ -25,7 +27,7 @@ function App() {
         <Route path='navar-web/about' element={<About />} />
         <Route path='navar-web/contact' element={<Contact />} />
       </Routes>
-      <Footer />
+      <Footer current={current} setCurrent={(current) => setCurrent(current)}/>
     </Router>
   </div>
   );

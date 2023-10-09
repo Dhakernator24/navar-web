@@ -23,7 +23,7 @@ const products = [
 
 const navBarElements = [
 
-  { name: 'Home', href: 'navar-web/', current: 'home'},
+  { name: 'Home', href: 'navar-web/', current: 'home' },
   { name: 'Services' },
   { name: 'About Us', href: 'navar-web/about', current: 'about' },
   { name: 'Our Work', href: 'navar-web/work', current: 'work' },
@@ -41,9 +41,9 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
-export default function NavBar() {
+export default function NavBar({current, setCurrent}) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-  const [current, setCurrent] = useState("home");
+  
 
   return (
     <div className="bg-white fixed top-0 w-full">
@@ -52,17 +52,17 @@ export default function NavBar() {
           //logo
         }
         <div className="flex 2xl:justify-center 2xl:pr-48 lg:flex-1">
-          <Link to="/navar-web" className="">
+          <Link to="/navar-web" onClick={() => setCurrent("home")} className="">
             <img className="h-16 w-42" src={logo} alt="" />
           </Link>
         </div>
         {
-          //Mobile version
+          //mobile menu icon
         }
         <div className="flex lg:hidden">
           <button
             type="button"
-            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
+            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-logo"
             onClick={() => setMobileMenuOpen(true)}
           >
             <span className="sr-only">Open main menu</span>
@@ -70,7 +70,7 @@ export default function NavBar() {
           </button>
         </div>
         {
-          //navBar elements
+          //navBar elements desktop
         }
         <Popover.Group className="hidden lg:flex lg:gap-x-12 ">
           {
@@ -81,7 +81,7 @@ export default function NavBar() {
               return <Popover className="relative group">
                 <Popover.Button className=" py-4 focus:outline-none">
                   <div className="transition ease-in-out duration-500 font-oxygen flex items-center gap-x-1 text-base font-semibold leading-6 text-gray-900">
-                    <span className="text-base font-oxygen text-logo-main font-semibold leading-6 no-underline "> Services </span>
+                    <span className="text-base font-oxygen text-logo-main font-semibold leading-6 no-underline "> {item.name} </span>
                     <ChevronDownIcon className="h-5 w-5 flex-none text-gray-400" aria-hidden="true" />
                   </div>
                   <div className='max-w-0 bg-logo-second mt-2 h-1 group-hover:max-w-full group-focus:max-w-0 transition-all duration-50' />
@@ -136,9 +136,9 @@ export default function NavBar() {
             } else {
               return <Link to={item.href} onClick={() => setCurrent(item.current)} className='group transition duration-300 py-4 no-underline' >
                 <span className="text-base font-oxygen text-logo-main font-semibold leading-6 no-underline "> {item.name} </span>
-                {current == item.current && 
-                <div className='bg-logo-second mt-2 h-1 max-w-full'/> || 
-                <div className='max-w-0 bg-logo-second mt-2 h-1 group-hover:max-w-full transition-all duration-50' />}
+                {current == item.current &&
+                  <div className='bg-logo-second mt-2 h-1 max-w-full' /> ||
+                  <div className='max-w-0 bg-logo-second mt-2 h-1 group-hover:max-w-full transition-all duration-50' />}
               </Link>
             }
           }
@@ -148,87 +148,82 @@ export default function NavBar() {
 
         </Popover.Group>
 
-        <Link to='/es/'className="no-underline hidden 2xl:pl-48 lg:flex font-semibold items-center justify-between 2xl:justify-center lg:flex-1 lg:justify-end">
-            <span className='font-oxygen text-logo no-underline'>ENG</span>
-            <img className="h-6 w-12 mx-2" src={flag} alt="" />
+        {
+          //Language
+        }
+        <Link to='/es/' className="no-underline hidden 2xl:pl-48 lg:flex font-semibold items-center justify-between 2xl:justify-center lg:flex-1 lg:justify-end">
+          <span className='font-oxygen text-logo no-underline'>ENG</span>
+          <img className="h-6 w-12 mx-2" src={flag} alt="" />
         </Link>
 
       </nav>
       <Dialog as="div" className="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
         <div className="fixed inset-0 z-10" />
         <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+          {
+            //logo and X
+          }
           <div className="flex items-center justify-between">
-            <a href="#" className="-m-1.5 p-1.5">
-              <span className="sr-only">Your Company</span>
-              <img
-                className="h-8 w-auto"
-                src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-                alt=""
-              />
-            </a>
+            <Link to="/navar-web" className="">
+              <img className="h-12 w-auto" src={logo} alt="" />
+            </Link>
             <button
               type="button"
-              className="-m-2.5 rounded-md p-2.5 text-gray-700"
+              className="-m-2.5 rounded-md p-2.5 text-logo"
               onClick={() => setMobileMenuOpen(false)}
             >
               <span className="sr-only">Close menu</span>
               <XMarkIcon className="h-6 w-6" aria-hidden="true" />
             </button>
           </div>
+          {
+            //navbar elements
+          }
           <div className="mt-6 flow-root">
             <div className="-my-6 divide-y divide-gray-500/10">
               <div className="space-y-2 py-6">
-                <Disclosure as="div" className="-mx-3">
-                  {({ open }) => (
-                    <>
-                      <Disclosure.Button className="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
-                        Product
-                        <ChevronDownIcon
-                          className={classNames(open ? 'rotate-180' : '', 'h-5 w-5 flex-none')}
-                          aria-hidden="true"
-                        />
-                      </Disclosure.Button>
-                      <Disclosure.Panel className="mt-2 space-y-2">
-                        {[...products, ...callsToAction].map((item) => (
-                          <Disclosure.Button
-                            key={item.name}
-                            as="a"
-                            href={item.href}
-                            className="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                          >
+                {navBarElements.map(item => {
+                  if (item.name == 'Services') {
+                    return <Disclosure as="div" className="focus:outline-none">
+                      {({ open }) => (
+                        <>
+                          <Disclosure.Button className="flex w-full items-center justify-between rounded-lg focus:outline-none
+                          py-2 px-3 pr-3.5 text-base font-semibold font-oxygen leading-7 text-gray-900 hover:bg-gray-50">
                             {item.name}
+                            <ChevronDownIcon
+                              className={classNames(open ? 'rotate-180' : '', 'h-5 w-5 flex-none')}
+                              aria-hidden="true"
+                            />
                           </Disclosure.Button>
-                        ))}
-                      </Disclosure.Panel>
-                    </>
-                  )}
-                </Disclosure>
-                <a
-                  href="#"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                >
-                  Features
-                </a>
-                <a
-                  href="#"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                >
-                  Marketplace
-                </a>
-                <a
-                  href="#"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                >
-                  Company
-                </a>
+                          <Disclosure.Panel className="mt-2 space-y-2">
+                            {products.map((item) => (
+                              <Disclosure.Button
+                                key={item.name}
+                                as="a"
+                                href={item.href}
+                                className="block rounded-lg py-2 pl-6 pr-3 no-underline text-sm font-oxygen leading-7 text-logo hover:bg-gray-50 hover:text-logo"
+                              >
+                                {item.name}
+                              </Disclosure.Button>
+                            ))}
+                          </Disclosure.Panel>
+                        </>
+                      )}
+                    </Disclosure>
+                  } else {
+                    return <Link
+                      href="#"
+                      className="block rounded-lg px-3 py-2 text-base no-underline font-semibold font-oxygen leading-7 text-logo hover:bg-gray-50 hover:text-logo"
+                    > {item.name}
+                    </Link>
+                  }
+                })}
               </div>
-              <div className="py-6">
-                <a
-                  href="#"
-                  className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                >
-                  Log in
-                </a>
+              <div className="py-6 px-3">
+                <Link to='/es/' className="no-underline flex font-semibold items-center justify-start">
+                  <span className='font-oxygen text-logo no-underline'>ENG</span>
+                  <img className="h-3 w-auto mx-2" src={flag} alt="" />
+                </Link>
               </div>
             </div>
           </div>
