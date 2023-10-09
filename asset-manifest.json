@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/navbar-web/static/css/main.a16a9bc7.css",
+    "main.js": "/navbar-web/static/js/main.6f49b154.js",
+    "static/js/787.ba86c4cf.chunk.js": "/navbar-web/static/js/787.ba86c4cf.chunk.js",
+    "static/media/bandera-usa.png": "/navbar-web/static/media/bandera-usa.0945e79114e55d927264.png",
+    "static/media/web_page_image.jpg": "/navbar-web/static/media/web_page_image.9c5796b18dc8db5d99bf.jpg",
+    "static/media/navarIconNoBg.png": "/navbar-web/static/media/navarIconNoBg.448be246177d51f7e2e3.png",
+    "static/media/logo.svg": "/navbar-web/static/media/logo.0b9ae72ec0c8cd855ac0b077849d4c2c.svg",
+    "index.html": "/navbar-web/index.html",
+    "main.a16a9bc7.css.map": "/navbar-web/static/css/main.a16a9bc7.css.map",
+    "main.6f49b154.js.map": "/navbar-web/static/js/main.6f49b154.js.map",
+    "787.ba86c4cf.chunk.js.map": "/navbar-web/static/js/787.ba86c4cf.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a16a9bc7.css",
+    "static/js/main.6f49b154.js"
+  ]
+}
