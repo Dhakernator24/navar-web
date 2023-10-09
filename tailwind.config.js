@@ -39,19 +39,24 @@ module.exports = {
       },
     },
     screens: {
-      'sm': '640px',
+      //mobile
+      'sm': '600px',
       // => @media (min-width: 640px) { ... }
 
-      'md': '768px',
+      //tablet
+      'md': '750px',
       // => @media (min-width: 768px) { ... }
 
-      'lg': '1024px',
+      //small laptops
+      'lg': '1000px',
       // => @media (min-width: 1024px) { ... }
 
-      'xl': '1280px',
+      //big laptops
+      'xl': '1500px',
       // => @media (min-width: 1280px) { ... }
 
-      '2xl': '1536px',
+      //monitors
+      '2xl': '2000px',
       // => @media (min-width: 1536px) { ... }
     }
   },
