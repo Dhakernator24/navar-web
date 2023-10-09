@@ -1,13 +1,20 @@
 import React, { useEffect, useState } from 'react';
-import image_good from '../assets/web_page_image.jpg';
+import ImageHero from '../components/ImageHero';
+import Services from '../components/Services';
+import Intro from '../components/Intro';
+import NavbarTail from '../Navigation/NavBar';
 
 function Home() {
 
-    return (
-        <div className='background'>
-            <img src={image_good} className='img' alt="Company Picture" />;
-        </div>
-    );
+	return (
+		<div className='bg-white h-fit w-screen'>
+			<ImageHero />
+			<Intro/>
+			<div className='h-[1px] bg-logo w-1/2 mx-auto mt-32'/>
+			<Services />
+		</div>
+
+	)
 
 }
 
