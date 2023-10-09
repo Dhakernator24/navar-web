@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/navar-web/static/css/main.a16a9bc7.css",
-    "main.js": "/navar-web/static/js/main.10f793a5.js",
+    "main.css": "/navar-web/static/css/main.859a8709.css",
+    "main.js": "/navar-web/static/js/main.5b30fbd2.js",
     "static/js/787.ba86c4cf.chunk.js": "/navar-web/static/js/787.ba86c4cf.chunk.js",
     "static/media/bandera-usa.png": "/navar-web/static/media/bandera-usa.0945e79114e55d927264.png",
     "static/media/web_page_image.jpg": "/navar-web/static/media/web_page_image.9c5796b18dc8db5d99bf.jpg",
     "static/media/navarIconNoBg.png": "/navar-web/static/media/navarIconNoBg.448be246177d51f7e2e3.png",
     "static/media/logo.svg": "/navar-web/static/media/logo.0b9ae72ec0c8cd855ac0b077849d4c2c.svg",
     "index.html": "/navar-web/index.html",
-    "main.a16a9bc7.css.map": "/navar-web/static/css/main.a16a9bc7.css.map",
-    "main.10f793a5.js.map": "/navar-web/static/js/main.10f793a5.js.map",
+    "main.859a8709.css.map": "/navar-web/static/css/main.859a8709.css.map",
+    "main.5b30fbd2.js.map": "/navar-web/static/js/main.5b30fbd2.js.map",
     "787.ba86c4cf.chunk.js.map": "/navar-web/static/js/787.ba86c4cf.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a16a9bc7.css",
-    "static/js/main.10f793a5.js"
+    "static/css/main.859a8709.css",
+    "static/js/main.5b30fbd2.js"
   ]
 }
