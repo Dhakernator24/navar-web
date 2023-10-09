@@ -23,11 +23,11 @@ const products = [
 
 const navBarElements = [
 
-  { name: 'Home', href: '/', current: 'home'},
+  { name: 'Home', href: 'navar-web/', current: 'home'},
   { name: 'Services' },
-  { name: 'About Us', href: '/about', current: 'about' },
-  { name: 'Our Work', href: '/work', current: 'work' },
-  { name: 'Contact', href: '/contact', current: 'contact' },
+  { name: 'About Us', href: 'navar-web/about', current: 'about' },
+  { name: 'Our Work', href: 'navar-web/work', current: 'work' },
+  { name: 'Contact', href: 'navar-web/contact', current: 'contact' },
   //{ name: 'Reviews', href: 'reviews'},
 ]
 const callsToAction = [
@@ -52,7 +52,7 @@ export default function NavBar() {
           //logo
         }
         <div className="flex 2xl:justify-center 2xl:pr-48 lg:flex-1">
-          <Link to="/" className="">
+          <Link to="/navar-web" className="">
             <img className="h-16 w-42" src={logo} alt="" />
           </Link>
         </div>

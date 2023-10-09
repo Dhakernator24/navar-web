@@ -1,7 +1,7 @@
 {
   "name": "business-app-frontend",
   "version": "0.1.0",
-  "homepage": "https://dhakernator24.github.io/navar-web",
+  "homepage": "https://Dhakernator24.github.io/navar-web",
   "private": true,
   "dependencies": {
     "@headlessui/react": "^1.7.17",

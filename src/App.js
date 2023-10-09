@@ -17,13 +17,13 @@ function App() {
     <Router className="bg-black">
       <Navbar />
       <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='/devops-solutions' element={<Devops />} />
-        <Route path='/cloud-solutions' element={<Cloud />} />
-        <Route path='/others' element={<Others />} />
-        <Route path='/web-development' element={<Webdev />} />
-        <Route path='/about' element={<About />} />
-        <Route path='/contact' element={<Contact />} />
+        <Route path='/navar-web' element={<Home />} />
+        <Route path='navar-web/devops' element={<Devops />} />
+        <Route path='navar-web/nose' element={<Cloud />} />
+        <Route path='navar-web/others' element={<Others />} />
+        <Route path='navar-web/web-development' element={<Webdev />} />
+        <Route path='navar-web/about' element={<About />} />
+        <Route path='navar-web/contact' element={<Contact />} />
       </Routes>
       <Footer />
     </Router>
