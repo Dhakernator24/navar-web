@@ -164,7 +164,7 @@ export default function NavBar({current, setCurrent}) {
             //logo and X
           }
           <div className="flex items-center justify-between">
-            <Link to="/navar-web" className="">
+            <Link to="/navar-web" onClick={() => setMobileMenuOpen(false)} className="">
               <img className="h-12 w-auto" src={logo} alt="" />
             </Link>
             <button
@@ -199,8 +199,9 @@ export default function NavBar({current, setCurrent}) {
                             {products.map((item) => (
                               <Disclosure.Button
                                 key={item.name}
-                                as="a"
-                                href={item.href}
+                                as="Link"
+                                to={item.href}
+                                onClick={() => setMobileMenuOpen(false)}
                                 className="block rounded-lg py-2 pl-6 pr-3 no-underline text-sm font-oxygen leading-7 text-logo hover:bg-gray-50 hover:text-logo"
                               >
                                 {item.name}
@@ -212,7 +213,8 @@ export default function NavBar({current, setCurrent}) {
                     </Disclosure>
                   } else {
                     return <Link
-                      href="#"
+                      onClick={() => setMobileMenuOpen(false)}
+                      to={item.href}
                       className="block rounded-lg px-3 py-2 text-base no-underline font-semibold font-oxygen leading-7 text-logo hover:bg-gray-50 hover:text-logo"
                     > {item.name}
                     </Link>
