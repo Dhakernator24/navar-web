@@ -14,17 +14,22 @@ module.exports = {
         'min': '500px',
       },
       fontFamily: {
-        oxygen: ['"Oxygen"', ...defaultTheme.fontFamily.sans]
+        oxygen: ["Oxygen", "sans-serif"],
+        poppins: ["Poppins", "sans-serif"],
+        cairoPlay: ["Cairo Play", "sans-serif"],
+        notoSans: ["Noto Sans", "sans-serif"],
+        zenKaku: ["Zen Kaku Gothic New", "sans-serif"],
       },
       colors: {
         'logo': {
           DEFAULT: '#00283f',
-          'main': '#00283e',
+          'main': '#00283f',
           'second': '#00d397',
           'secondDark': '#00845e',
           'light': '#9faeb7',
           'secLight': '#bff4e5',
-          'white': '#ffffff'
+          'white': '#ffffff',
+          'black': '#000000'
         }
       },
       borderColors:{

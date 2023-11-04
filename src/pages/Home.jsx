@@ -5,14 +5,14 @@ import Intro from '../components/Intro';
 import NavbarTail from '../Navigation/NavBar';
 import Team from '../components/Team';
 
-function Home() {
+function Home({className, setCurrent}) {
 
 	return (
-		<div className='bg-white h-fit w-screen'>
+		<div className={`${className} bg-white h-fit w-screen`}>
 			<ImageHero />
 			<Intro/>
 			<div className='h-[1px] bg-logo w-1/2 mx-auto my-32'/>
-			<Services />
+			<Services setCurrent={setCurrent}/>
 			<div className='h-[1px] bg-logo w-1/2 mx-auto my-32'/>
 			<Team/>
 		</div>

@@ -16,25 +16,25 @@ import { Link } from 'react-router-dom';
 
 const products = [
 
-  { name: 'Website Design', description: 'Get a fully operational profesional website for your business', href: '#', icon: GlobeAltIcon },
-  { name: 'Software Solutions', description: 'Come to us with a problem, we will give you an automated software solution for it', href: '#', icon: CodeBracketIcon },
-  { name: 'Devops', description: 'Manange your infrastucture, CICD, Deployments, Security, etc. Following the best practises', href: '#', icon: RocketLaunchIcon },
+  { name: 'Website Design', description: 'Get a fully operational profesional website for your business', href: 'web-design', icon: GlobeAltIcon },
+  { name: 'Cloud Solutions', description: 'Come to us with a problem, we will give you an automated software solution for it', href: 'cloud-solutions', icon: CodeBracketIcon },
+  { name: 'Devops', description: 'Manange your infrastucture, CICD, Deployments, Security, etc. Following the best practises', href: 'devops', icon: RocketLaunchIcon },
 ]
 
 const navBarElements = [
 
   { name: 'Home', href: 'navar-web/', current: 'home' },
-  { name: 'Services' },
-  { name: 'About Us', href: 'navar-web/about', current: 'about' },
-  { name: 'Our Work', href: 'navar-web/work', current: 'work' },
-  { name: 'Contact', href: 'navar-web/contact', current: 'contact' },
+  { name: 'Services', current: 'services' },
+  { name: 'About Us', href: '/navar-web/about', current: 'about' },
+  { name: 'Our Work', href: '/navar-web/work', current: 'work' },
+  { name: 'Contact', href: '/navar-web/contact', current: 'contact' },
   //{ name: 'Reviews', href: 'reviews'},
 ]
 const callsToAction = [
 
 
-  { name: 'Watch demo', href: '#', icon: PlayCircleIcon },
-  { name: 'Contact sales', href: '#', icon: PhoneIcon },
+  { name: 'Our Work', href: '/navar-web/our-work', icon: PlayCircleIcon },
+  { name: 'Contact Us', href: '/navar-web/contact', icon: PhoneIcon },
 ]
 
 function classNames(...classes) {
@@ -46,13 +46,13 @@ export default function NavBar({current, setCurrent}) {
   
 
   return (
-    <div className="bg-white fixed top-0 w-full">
+    <div className="bg-white fixed top-0 w-full max-h-[80px]">
       <nav className="sticky top-0 mx-auto text-logo-main flex items-center justify-between h-auto px-3 lg:px-8" aria-label="Global">
         {
           //logo
         }
         <div className="flex 2xl:justify-center 2xl:pr-48 lg:flex-1">
-          <Link to="/navar-web" onClick={() => setCurrent("home")} className="">
+          <Link to="/navar-web/" onClick={() => setCurrent("home")} className="">
             <img className="h-16 w-42" src={logo} alt="" />
           </Link>
         </div>
@@ -79,12 +79,15 @@ export default function NavBar({current, setCurrent}) {
           {navBarElements.map(item => {
             if (item.name == 'Services') {
               return <Popover className="relative group">
-                <Popover.Button className=" py-4 focus:outline-none">
+                <Popover.Button className=" py-4 focus:outline-none" onClick={() => setCurrent(item.current)}>
                   <div className="transition ease-in-out duration-500 font-oxygen flex items-center gap-x-1 text-base font-semibold leading-6 text-gray-900">
                     <span className="text-base font-oxygen text-logo-main font-semibold leading-6 no-underline "> {item.name} </span>
                     <ChevronDownIcon className="h-5 w-5 flex-none text-gray-400" aria-hidden="true" />
                   </div>
-                  <div className='max-w-0 bg-logo-second mt-2 h-1 group-hover:max-w-full group-focus:max-w-0 transition-all duration-50' />
+                  {current == item.current && <div className='bg-logo-second mt-2 h-1 max-w-full group-focus:max-w-0 transition-all duration-50' /> ||
+                    <div className='max-w-0 bg-logo-second mt-2 h-1 group-hover:max-w-full group-focus:max-w-0 transition-all duration-50' />
+                  }
+                  
                 </Popover.Button>
 
                 <Transition
@@ -108,7 +111,7 @@ export default function NavBar({current, setCurrent}) {
                             <item.icon className="h-6 w-6 text-logo-light group-hover/pop:text-logo-main" aria-hidden="true" />
                           </div>
                           <div className="flex-auto">
-                            <a href={item.href} className="block font-semibold no-underline text-logo-main group-hover:text-logo-main">
+                            <a href={item.href} onClick={() => setCurrent('services')} className="block font-semibold no-underline text-logo-main group-hover:text-logo-main">
                               {item.name}
                               <span className="absolute inset-0" />
                             </a>
@@ -117,17 +120,17 @@ export default function NavBar({current, setCurrent}) {
                         </div>
                       ))}
                     </div>
-                    <div className="grid grid-cols-2 divide-x divide-gray-900/5 bg-gray-50">
+                    <div className="grid grid-cols-2 divide-x divide-gray-900/5 bg-logo-secLight">
                       {callsToAction.map((item) => (
-                        <Link
+                        <a
                           key={item.name}
-                          to={item.href}
+                          href={item.href}
                           className="group/bpop flex items-center justify-center gap-x-2.5 p-3 text-sm font-semibold leading-6 no-underline
-                         text-gray-900 hover:bg-logo-light hover:text-logo-main"
+                         text-gray-900 hover:bg-logo hover:text-logo-second"
                         >
-                          <item.icon className="h-5 w-5 flex-none text-logo-light group-hover/bpop:text-logo-secLight" aria-hidden="true" />
+                          <item.icon className="h-5 w-5 flex-none text-logo group-hover/bpop:text-logo-second" aria-hidden="true" />
                           {item.name}
-                        </Link>
+                        </a>
                       ))}
                     </div>
                   </Popover.Panel>

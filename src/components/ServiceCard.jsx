@@ -6,12 +6,13 @@ import {
 	CodeBracketIcon,
 	RocketLaunchIcon
 } from '@heroicons/react/24/outline'
+import { Link } from 'react-router-dom';
 
-function ServiceCard({ name, subtitle, description, iconS, href }) {
+function ServiceCard({ name, subtitle, description, iconS, href, setCurrent }) {
 
 	return (
 		<div
-			className="rounded-lg overflow-hidden bg-logo-white text-center border-[1px] border-logo-second font-oxygen w-full lg:hover:shadow-2xl transition duration-200 ease-in"
+			className="flex flex-col h-full rounded-lg bg-logo-white text-center border-[1px] border-logo-second font-oxygen w-full lg:hover:shadow-2xl transition duration-200 ease-in"
 		>
 			<div className="w-full pt-3 pb-2 border-b border-logo-second">
 				<h2 className="font-bold text-3xl text-logo-main">
@@ -21,20 +22,24 @@ function ServiceCard({ name, subtitle, description, iconS, href }) {
 					{subtitle}
 				</p>
 			</div>
-			<div className="flex flex-col justify-center items-center">
-				<div className="flex flex-col justify-center items-center py-5">
-					{iconS}
+			<div className="w-full flex flex-col h-full justify-between items-center">
+				<div className='w-full px-2 flex flex-col justify-start'>
+					<div className="flex flex-col justify-between items-center pt-5">
+						{iconS}
+					</div>
+					<div className="leading-8 mt-4 text-lg text-logo-main">
+						{description}
+					</div>
 				</div>
-				<div className="leading-8 text-lg text-logo-main">
-					{description}
-				</div>
-				<div className="w-full py-8 px-6">
-					<a
-						href={href}
+
+				<div className="w-full h-fit py-8 px-6">
+					<Link
+						to={href}
+						onClick={() => setCurrent('services')}
 						className="w-full block bg-logo-main text-logo-second no-underline font-medium 
 												text-xl py-4 rounded-xl hover:shadow-lg hover:text-logo-main transition duration-200 ease-in-out hover:bg-logo-secLight"
-					>Learn More</a
-					>
+					>Learn More
+					</Link>
 				</div>
 			</div>
 		</div>

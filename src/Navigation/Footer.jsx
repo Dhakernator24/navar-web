@@ -1,13 +1,4 @@
-import { Fragment, useState } from 'react'
-import { Dialog, Disclosure, Popover, Transition } from '@headlessui/react'
-import {
-  Bars3Icon,
-  XMarkIcon,
-  GlobeAltIcon,
-  CodeBracketIcon,
-  RocketLaunchIcon
-} from '@heroicons/react/24/outline'
-import { ChevronDownIcon, PhoneIcon, PlayCircleIcon } from '@heroicons/react/20/solid'
+
 import logo from '../assets/navarIconNoBg.png';
 import flag from '../assets/bandera-usa.png'
 import { Link } from 'react-router-dom';
@@ -74,7 +65,7 @@ function Footer({ current, setCurrent }) {
               </Link>
             </div>
             <p class="mt-8 text-xs text-logo self-center">
-              © 2023 Navar Solutions
+              © 2023 Navar Solutions LLC
             </p>
           </div>
           <div class="grid grid-cols-2 gap-8 lg:col-span-2 lg:grid-cols-3">

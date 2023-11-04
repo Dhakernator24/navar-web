@@ -3,7 +3,7 @@ import {
 	Bars3Icon,
 	XMarkIcon,
 	GlobeAltIcon,
-	CodeBracketIcon,
+	CloudIcon,
 	RocketLaunchIcon
 } from '@heroicons/react/24/outline'
 import ServiceCard from './ServiceCard';
@@ -22,21 +22,21 @@ const services = [
 				<li>SEO best practices</li>
 				<li>Many more!</li>
 			</ul>,
-		href: '/web',
+		href: '/web-design',
 		icon: GlobeAltIcon
 	},
 	{
-		name: 'Software Solutions',
+		name: 'Cloud Solutions',
 		subtitle: 'We develop, your life becomes easier',
 		description:
 			<ul className='list-disc text-left'>
-				<li>Web and Mobile Aplications</li>
-				<li>Software Architecture</li>
-				<li>Automation tools</li>
-				<li>Security</li>
+				<li>AWS, Azure, GCP</li>
+				<li>Solutions Architecture</li>
+				<li>Cloud Migrations</li>
+				<li>Cost Optimization</li>
 			</ul>,
-		href: '/sofware',
-		icon: CodeBracketIcon
+		href: '/cloud-solutions',
+		icon: CloudIcon
 	},
 	{
 		name: 'Devops',
@@ -44,7 +44,7 @@ const services = [
 		description:
 			<ul className='list-disc text-left'>
 				<li>CICD Implementation</li>
-				<li>Cloud Solutions and Migrations</li>
+				<li>Secret Management and DevSecOps</li>
 				<li>Microservices based Architectures</li>
 				<li>IaC and Infrastructure Management</li>
 			</ul>,
@@ -56,11 +56,11 @@ const services = [
 
 
 
-function Services() {
+function Services({setCurrent}) {
 
 
 	return (
-		<div className="w-full h-full bg-white font-oxygen overflow-hidden px-10">
+		<div className="w-full h-fit bg-white font-oxygen overflow-hidden px-10">
 			<div className="container mx-auto">
 				<div>
 					<div className="text-center mb-10">
@@ -69,7 +69,7 @@ function Services() {
 						</h1>
 					</div>
 					<div
-						className="grid z-0 grid-cols-1 md:grid-cols-3 lg:grid-cols-3 justify-evenly gap-10 pt-10"
+						className="grid h-full z-0 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-evenly gap-10"
 					>
 						{services.map((service) => (
 							<ServiceCard
@@ -78,6 +78,7 @@ function Services() {
 								iconS={<service.icon className='w-1/4 h-auto text-logo-main'/>}
 								description={service.description}
 								href={service.href}
+								setCurrent={setCurrent}
 							/>
 						))}
 					</div>

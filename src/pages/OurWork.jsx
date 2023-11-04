@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import image_good from '../assets/web_page_image.jpg';
 
-function Others() {
+export default function OurWork() {
 
     return (
         <div className='background'>
@@ -10,5 +10,3 @@ function Others() {
     );
 
 }
-
-export default Others;
