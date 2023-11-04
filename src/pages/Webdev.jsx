@@ -10,6 +10,9 @@ export default function Webdev({ className }) {
                 <h2 className='text-2xl'>At affordable and custom prices for you and your business</h2>
                 <p className='text-base'>We started Navar Solutions to provide high quality and profesional software to medium and small businesess at affordable prices.
                 We believe that your company has every right to be announced to the public in </p>
+                <div className='w-full'>
+                    example
+                </div>
             </div>
 
         </div>
