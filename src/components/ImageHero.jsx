@@ -23,7 +23,7 @@ function ImageHero() {
 						<p className="text-2xl text-logo-white font-oxygen">Your business matters</p>
 					</div>
 					<a
-						href='/navar-web/contact'
+						href='/contact'
 						className="w-3/5 block bg-logo-main font-oxygen text-logo-white no-underline font-medium text-center
 							text-xl py-4 rounded-sm border-[2px] border-logo-secLight hover:shadow-lg hover:text-logo-black hover:scale-105 transition duration-300 ease-in-out hover:bg-logo-secLight"
 					>Contact Us!

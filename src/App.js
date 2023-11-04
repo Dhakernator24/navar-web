@@ -18,25 +18,25 @@ function App() {
     const currentPath = window.location.pathname;
     console.log(currentPath)
 
-    if (currentPath == '/navar-web' || currentPath == '/navar-web/') return 'home';
-    else if (currentPath == '/navar-web/about/') return 'about';
-    else if (currentPath == '/navar-web/contact/') return 'contact';
-    else if (currentPath == '/navar-web/web-design/') return 'services';
-    else if (currentPath == '/navar-web/cloud-solutions/') return 'services';
-    else if (currentPath == '/navar-web/devops/') return 'services';
+    if (currentPath == '' || currentPath == '/') return 'home';
+    else if (currentPath == '/about/') return 'about';
+    else if (currentPath == '/contact/') return 'contact';
+    else if (currentPath == '/web-design/') return 'services';
+    else if (currentPath == '/cloud-solutions/') return 'services';
+    else if (currentPath == '/devops/') return 'services';
     else return ""
   });
 
   const marginTop = 'mt-[80px]'
 
   const paths = [
-    { name: 'Home', element: <Home className={marginTop} setCurrent={setCurrent} />, path: '/navar-web/' },
-    { name: 'Web Design', element: <Webdev className={marginTop} />, path: 'navar-web/web-design/' },
-    { name: 'Cloud Solutions', element: <Cloud />, path: 'navar-web/cloud-solutions/' },
-    { name: 'Devops', element: <Devops />, path: 'navar-web/devops/' },
-    { name: 'Contact Us', element: <Contact />, path: 'navar-web/contact' },
-    { name: 'Our Work', element: <OurWork displayPage='our-work' />, path: 'navar-web/our-work/' },
-    { name: 'About Us', element: <About />, path: 'navar-web/about/' },
+    { name: 'Home', element: <Home className={marginTop} setCurrent={setCurrent} />, path: '/' },
+    { name: 'Web Design', element: <Webdev className={marginTop} />, path: '/web-design/' },
+    { name: 'Cloud Solutions', element: <Cloud />, path: '/cloud-solutions/' },
+    { name: 'Devops', element: <Devops />, path: '/devops/' },
+    { name: 'Contact Us', element: <Contact />, path: '/contact' },
+    { name: 'Our Work', element: <OurWork displayPage='our-work' />, path: '/our-work/' },
+    { name: 'About Us', element: <About />, path: '/about/' },
   ]
 
   return (

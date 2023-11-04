@@ -12,19 +12,19 @@ const classNameTitles = "font-bold text-xl"
 
 const company = [
 
-  { name: 'Home', href: 'navar-web/', current: 'home' },
-  { name: 'About Us', href: 'navar-web/about', current: 'about' },
-  { name: 'Our Work', href: 'navar-web/work', current: 'work' },
-  { name: 'Contact', href: 'navar-web/contact', current: 'contact' },
+  { name: 'Home', href: '/', current: 'home' },
+  { name: 'About Us', href: '/about', current: 'about' },
+  { name: 'Our Work', href: '/work', current: 'work' },
+  { name: 'Contact', href: '/contact', current: 'contact' },
   //{ name: 'Reviews', href: 'reviews'},
 ]
 
 const services = [
 
-  { name: 'Web Design', href: 'navar-web/web', current: 'home' },
-  { name: 'Software Solutions', href: 'navar-web/software', current: 'about' },
-  { name: 'Devops', href: 'navar-web/devops', current: 'work' },
-  { name: 'Learn More', href: 'navar-web/contact', current: 'contact' },
+  { name: 'Web Design', href: '/web', current: 'home' },
+  { name: 'Software Solutions', href: '/software', current: 'about' },
+  { name: 'Devops', href: '/devops', current: 'work' },
+  { name: 'Learn More', href: '/contact', current: 'contact' },
   //{ name: 'Reviews', href: 'reviews'},
 ]
 

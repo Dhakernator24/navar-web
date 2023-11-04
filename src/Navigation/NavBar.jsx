@@ -23,18 +23,18 @@ const products = [
 
 const navBarElements = [
 
-  { name: 'Home', href: 'navar-web/', current: 'home' },
+  { name: 'Home', href: '/', current: 'home' },
   { name: 'Services', current: 'services' },
-  { name: 'About Us', href: '/navar-web/about', current: 'about' },
-  { name: 'Our Work', href: '/navar-web/work', current: 'work' },
-  { name: 'Contact', href: '/navar-web/contact', current: 'contact' },
+  { name: 'About Us', href: '/about', current: 'about' },
+  { name: 'Our Work', href: '/work', current: 'work' },
+  { name: 'Contact', href: '/contact', current: 'contact' },
   //{ name: 'Reviews', href: 'reviews'},
 ]
 const callsToAction = [
 
 
-  { name: 'Our Work', href: '/navar-web/our-work', icon: PlayCircleIcon },
-  { name: 'Contact Us', href: '/navar-web/contact', icon: PhoneIcon },
+  { name: 'Our Work', href: '/our-work', icon: PlayCircleIcon },
+  { name: 'Contact Us', href: '/contact', icon: PhoneIcon },
 ]
 
 function classNames(...classes) {
@@ -52,7 +52,7 @@ export default function NavBar({current, setCurrent}) {
           //logo
         }
         <div className="flex 2xl:justify-center 2xl:pr-48 lg:flex-1">
-          <Link to="/navar-web/" onClick={() => setCurrent("home")} className="">
+          <Link to="/" onClick={() => setCurrent("home")} className="">
             <img className="h-16 w-42" src={logo} alt="" />
           </Link>
         </div>
@@ -167,7 +167,7 @@ export default function NavBar({current, setCurrent}) {
             //logo and X
           }
           <div className="flex items-center justify-between">
-            <Link to="/navar-web" onClick={() => setMobileMenuOpen(false)} className="">
+            <Link to="" onClick={() => setMobileMenuOpen(false)} className="">
               <img className="h-12 w-auto" src={logo} alt="" />
             </Link>
             <button
