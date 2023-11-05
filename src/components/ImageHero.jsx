@@ -1,7 +1,8 @@
+import { Link } from 'react-router-dom';
 import image_good from '../assets/web_page_image.jpg';
 
 //rgba(191, 244, 229, 0.25)
-function ImageHero() {
+function ImageHero({setCurrent}) {
 
 
 	return (
@@ -11,23 +12,24 @@ function ImageHero() {
 			}}
 			className="flex shadow-2xl my-[80px] h-[calc(100vh-80px)] w-auto bg-cover 
 			bg-center bg-no-repeat text-white">
-			<div className="flex h-full w-full self-center lg:pl-20 md:pl-5 sm:pl-0">
-				<div className='flex flex-col justify-center items-center gap-20'>
+			<div className="flex h-full w-full self-center lg:pl-32 md:pl-5 sm:pl-0">
+				<div className='flex flex-col justify-center items-start gap-10'>
 					<div
 						// style={{
 						// 	background: `radial-gradient(circle, rgba(0,40,63,1) 30%, rgba(159,174,183,1) 100%)`
 						// }}
-						className="text-center rounded-md p-2">
-						<h1 className="text-7xl text-logo-white font-oxygen font-light mb-4">
+						className="rounded-md p-2">
+						<h1 className="text-6xl text-logo-white font-oxygen font-light mb-4">
 							<span className='text-logo-second'>S</span>oftware <span className='text-logo-second'>S</span>pecialists</h1>
 						<p className="text-2xl text-logo-white font-oxygen">Your business matters</p>
 					</div>
-					<a
-						href='/contact'
-						className="w-3/5 block bg-logo-main font-oxygen text-logo-white no-underline font-medium text-center
-							text-xl py-4 rounded-sm border-[2px] border-logo-secLight hover:shadow-lg hover:text-logo-black hover:scale-105 transition duration-300 ease-in-out hover:bg-logo-secLight"
+					<Link
+						onClick={() => setCurrent("contact")}
+						to='/contact'
+						className="w-[200px] blockfont-oxygen text-logo no-underline text-center
+							text-xl font-bold py-4 border-[2px] border-logo-second bg-logo-white hover:border-logo-white hover:text-logo-second hover:bg-logo transition-all duration-300 ease-in-out "
 					>Contact Us!
-					</a>
+					</Link>
 				</div>
 			</div>
 		</div>

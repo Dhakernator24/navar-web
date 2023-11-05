@@ -9,7 +9,7 @@ function Home({className, setCurrent}) {
 
 	return (
 		<div className={`${className} bg-white h-fit w-screen`}>
-			<ImageHero />
+			<ImageHero setCurrent={setCurrent} />
 			<Intro/>
 			<div className='h-[1px] bg-logo w-1/2 mx-auto my-32'/>
 			<Services setCurrent={setCurrent}/>

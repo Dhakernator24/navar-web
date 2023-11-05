@@ -35,7 +35,7 @@ function App() {
     { name: 'Cloud Solutions', element: <Cloud />, path: '/cloud-solutions/' },
     { name: 'Devops', element: <Devops />, path: '/devops/' },
     { name: 'Contact Us', element: <Contact />, path: '/contact' },
-    { name: 'Our Work', element: <OurWork displayPage='our-work' />, path: '/our-work/' },
+    { name: 'Our Work', element: <OurWork className={marginTop} />, path: '/our-work/' },
     { name: 'About Us', element: <About />, path: '/about/' },
   ]
 

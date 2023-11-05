@@ -26,7 +26,7 @@ const navBarElements = [
   { name: 'Home', href: '/', current: 'home' },
   { name: 'Services', current: 'services' },
   { name: 'About Us', href: '/about', current: 'about' },
-  { name: 'Our Work', href: '/work', current: 'work' },
+  { name: 'Our Work', href: '/our-work', current: 'work' },
   { name: 'Contact', href: '/contact', current: 'contact' },
   //{ name: 'Reviews', href: 'reviews'},
 ]
@@ -46,7 +46,7 @@ export default function NavBar({current, setCurrent}) {
   
 
   return (
-    <div className="bg-white fixed top-0 w-full max-h-[80px]">
+    <div className="bg-white z-10 fixed top-0 w-full max-h-[80px]">
       <nav className="sticky top-0 mx-auto text-logo-main flex items-center justify-between h-auto px-3 lg:px-8" aria-label="Global">
         {
           //logo
