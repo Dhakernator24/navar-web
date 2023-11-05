@@ -19,8 +19,8 @@ function ImageHero({setCurrent}) {
 						// 	background: `radial-gradient(circle, rgba(0,40,63,1) 30%, rgba(159,174,183,1) 100%)`
 						// }}
 						className="rounded-md p-2">
-						<h1 className="text-6xl text-logo-white font-oxygen font-light mb-4">
-							<span className='text-logo-second'>S</span>oftware <span className='text-logo-second'>S</span>pecialists</h1>
+						<h1 className="text-7xl font-light text-logo-white font-oxygen mb-4">
+							<span className='text-logo-white'>S</span>oftware <span className='text-logo-white'>S</span>pecialists</h1>
 						<p className="text-2xl text-logo-white font-oxygen">Your business matters</p>
 					</div>
 					<Link
