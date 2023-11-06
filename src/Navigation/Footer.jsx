@@ -31,8 +31,8 @@ const services = [
 function Footer({ current, setCurrent }) {
 
   return (
-    <footer class="bg-logo-secLight bottom-0 font-oxygen">
-      <div class="max-w-screen-xl px-4 py-16 mx-auto sm:px-6 lg:px-8">
+    <footer class="bg-logo-secLight bottom-0 font-oxygen h-fit">
+      <div class="max-w-screen-xl px-4 py-4 mx-auto sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 gap-8 lg:grid-cols-3">
           <div className='flex flex-col justify-center items-center'>
             <Link to="/" className="">

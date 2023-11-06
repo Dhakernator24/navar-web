@@ -19,11 +19,11 @@ function App() {
     console.log(currentPath)
 
     if (currentPath == '' || currentPath == '/') return 'home';
-    else if (currentPath == '/about/') return 'about';
-    else if (currentPath == '/contact/') return 'contact';
-    else if (currentPath == '/web-design/') return 'services';
-    else if (currentPath == '/cloud-solutions/') return 'services';
-    else if (currentPath == '/devops/') return 'services';
+    else if (currentPath == '/about') return 'about';
+    else if (currentPath == '/contact') return 'contact';
+    else if (currentPath == '/web-design') return 'services';
+    else if (currentPath == '/cloud-solutions') return 'services';
+    else if (currentPath == '/devops') return 'services';
     else return ""
   });
 
