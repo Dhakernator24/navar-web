@@ -26,9 +26,9 @@ export default function Webdev({ className }) {
     return (
         <div className={`${className} min-h-[calc(100vh-80px)] h-full w-full`}>
             <div className='font-oxygen text-logo flex flex-col w-full'>
-                <div className='bg-logo-secLight w-full pl-20 py-20 h-fit border-b-[4px] border-logo'>
-                    <h1 className='text-4xl font-bold'>Web Design & Custom Websites</h1>
-                    <h2 className='text-2xl font-cursive'>Empowering Small and Midsize Businesses Online</h2>
+                <div className='bg-logo-secLight w-full pl-20 py-10 h-fit border-b-[4px] border-logo'>
+                    <h1 className='text-4xl font-bold'>WEB DESIGN & CUSTOM WEBSITES</h1>
+                    <h2 className='text-2xl font-extralight'>Empowering Small and Midsize Businesses Online</h2>
                 </div>
 
 
