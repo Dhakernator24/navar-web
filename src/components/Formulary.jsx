@@ -106,7 +106,7 @@ export default function Formulary() {
   //COMMON STYLES
 
   const titleStyles = 'mb-3 block text-base font-oxygen text-black'
-  const boxStyles = 'w-full rounded-sm border-[2px] border-[#e0e0e0] bg-white py-3 px-6 text-base font-oxygen text-[#6B7280] outline-none focus:border-logo-second focus:shadow-md'
+  const boxStyles = 'w-full border-[2px] border-[#e0e0e0] bg-white py-3 px-6 text-base font-oxygen text-[#6B7280] outline-none focus:border-logo-second focus:shadow-md'
 
 
 
@@ -114,10 +114,10 @@ export default function Formulary() {
   return (
     <>
       {!isSent &&
-        <div className="flex items-center justify-center px-12 pt-4 pb-12">
-          <div className="mx-auto w-full max-w-[550px]">
+        <div className="w-[60%] flex items-start justify-start px-12 pt-10 pb-12">
+          <div className="w-full max-w-[550px]">
             <div className='text-lg mb-10 font-oxygen font-semibold text-black'>
-              If you prefer we will contact you:
+              Or if you prefer we will contact you:
             </div>
             <form onSubmit={handleSubmit}>
               <div className="flex flex-row gap-3">
@@ -224,10 +224,10 @@ export default function Formulary() {
                 Something went wrong, please try again later
               </div>
               }
-              <div className="mt-4 flex flex-row justify-center items-center">
+              <div className="mt-4 flex flex-row justify-start items-center">
                 <div className='inline-block relative w-[125px] h-[54px]'>
                   <button
-                    className="absolute top-0 left-0 font-oxygen font-semibold border-[3px] text-base  py-3 px-8 rounded-sm text-center border-logo hover:bg-logo-secLight hover:text-logo outline-none
+                    className="absolute top-0 left-0 font-oxygen font-semibold border-[3px] text-base  py-3 px-8 text-center border-logo hover:bg-logo-secLight hover:text-logo outline-none
                    bg-logo text-logo-second transition-all duration-300"
                     type='submit'
                   >

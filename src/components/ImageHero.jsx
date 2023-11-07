@@ -18,18 +18,18 @@ function ImageHero({setCurrent}) {
 						// style={{
 						// 	background: `radial-gradient(circle, rgba(0,40,63,1) 30%, rgba(159,174,183,1) 100%)`
 						// }}
-						className="rounded-md p-2">
+						className="p-2">
 						<h1 className="text-7xl font-light text-logo-white font-oxygen mb-4">
 							<span className='text-logo-second'>S</span>oftware <span className='text-logo-second'>S</span>pecialists</h1>
 						<p className="text-2xl text-logo-white font-oxygen">Your business matters</p>
 					</div>
-					<Link
+					<a
 						onClick={() => setCurrent("contact")}
-						to='/contact'
+						href='/contact'
 						className="w-[200px] blockfont-oxygen  no-underline text-center
 							text-xl font-bold py-4 border-[2px] border-logo-white text-logo-white [background-color:transparent] hover:border-logo-secLight hover:text-logo hover:bg-logo-secLight transition-all duration-300"
 					>Contact Us!
-					</Link>
+					</a>
 				</div>
 			</div>
 		</div>

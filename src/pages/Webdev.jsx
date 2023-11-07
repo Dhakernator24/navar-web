@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import webDesign from '../assets/web-design.jpg';
 import { Link } from 'react-router-dom';
 
-export default function Webdev({ className }) {
+export default function Webdev({ className, setCurrent }) {
 
     const web_services = [
         {
@@ -33,7 +33,7 @@ export default function Webdev({ className }) {
 
 
                 <div className='w-full h-full mt-10 px-20 flex flex-row gap-10'>
-                    <img src={webDesign} className='w-[400px] h-fit rounded-md' />
+                    <img src={webDesign} className='w-[400px] h-fit' />
 
                     <div className='flex flex-col justify-center items-start flex-grow'>
                         <h3 className='text-xl'>Why Choose Our Web Design Services? </h3>
@@ -64,12 +64,13 @@ export default function Webdev({ className }) {
                     </div>
                     <div className='pl-6 flex flex-col mt-8'>
                         <p className='text-base'>Browse through our recent web design projects for small and midsize businesses. Each project showcases our commitment to excellence and innovation in web design.</p>
-                        <Link
-                            to='/our-work'
-                            className='group no-underline w-fit'>
+                        <a
+                            href='/our-work'
+                            className='group no-underline w-fit'
+                            onClick={() => setCurrent('our-work')}>
                             <p className='text-logo mb-0 font-bold transition-all duration-300'>See our work!</p>
                             <div className='h-[5px] bg-logo-second group-hover:w-full w-[20%] transition-all duration-300' />
-                        </Link>
+                        </a>
                     </div>
 
 
@@ -82,12 +83,13 @@ export default function Webdev({ className }) {
                     </div>
                     <div className='pl-6 flex flex-col mt-8'>
                         <p className='text-base'>Contact our team today to discuss your web design and custom website needs. We're passionate about helping businesses like yours thrive in the digital landscape.</p>
-                        <Link
-                            to='/contact'
-                            className='group no-underline w-fit'>
+                        <a
+                            href='/contact'
+                            className='group no-underline w-fit'
+                            onClick={() => setCurrent('contact')}>
                             <p className='text-logo mb-0 font-bold transition-all duration-300'>Let's Talk!</p>
                             <div className='h-[5px] bg-logo-second group-hover:w-full w-[20%] transition-all duration-300' />
-                        </Link>
+                        </a>
                     </div>
 
                 </div>

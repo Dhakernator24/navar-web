@@ -33,13 +33,13 @@ function ServiceCard({ name, subtitle, description, iconS, href, setCurrent }) {
 				</div>
 
 				<div className="w-full h-fit py-8 px-6">
-					<Link
-						to={href}
+					<a
+						href={href}
 						onClick={() => setCurrent('services')}
 						className="w-full block bg-logo-main text-logo-second no-underline font-medium 
 												text-xl py-4 hover:shadow-lg hover:text-logo-main transition duration-200 ease-in-out hover:bg-logo-secLight"
 					>Learn More
-					</Link>
+					</a>
 				</div>
 			</div>
 		</div>

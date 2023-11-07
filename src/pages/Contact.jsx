@@ -5,13 +5,13 @@ import ContactCard from '../components/ContactCard';
 function Contact() {
 
   return (
-    <div className='min-h-[calc(100vh-304px)] w-screen'>
-      <div className='w-full h-[80px] bg-black' />
-      <div className='bg-white h-fit w-screen flex flex-col items-center justify-center'>
-        <div className='text-4xl font-oxygen my-10 text-black font-semibold'>
-          <span className='text-logo underline underline-offset-4 decoration-logo-second decoration-4'>CONTACT US</span>
+    <div className='min-h-[calc(100vh-304px)] mt-[80px] w-full'>
+      <div className='font-oxygen text-logo flex flex-col w-full'>
+        <div className='bg-logo-secLight flex flex-col justify-center items-center w-full h-fit py-10 pl-20 '>
+          <h1 className='lg:text-4xl text-2xl font-bold'>CONTACT US</h1>
+          <h2 className='lg:text-2xl text-xl font-light'>We're Here to Listen and Assist You</h2>
         </div>
-        <div className='flex md:flex-row flex-col h-full md:items-stretch items-center justify-center border-[1px] mb-10 bg-gray-100 rounded-xl'>
+        <div className='flex md:flex-row flex-col h-full w-full md:items-stretch bg-logo-white border-y-[4px] border-logo'>
           <ContactCard />
           <Formulary />
         </div>

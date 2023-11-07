@@ -11,6 +11,7 @@ import Navbar from './Navigation/NavBar';
 import Footer from './Navigation/Footer';
 import { Fragment, useState } from 'react'
 import OurWork from './pages/OurWork';
+import ScrollToTop from './Navigation/ScrollToTop';
 
 function App() {
   const [current, setCurrent] = useState(() => {
@@ -20,6 +21,7 @@ function App() {
 
     if (currentPath == '' || currentPath == '/') return 'home';
     else if (currentPath == '/about') return 'about';
+    else if (currentPath == '/our-work') return 'our-work';
     else if (currentPath == '/contact') return 'contact';
     else if (currentPath == '/web-design') return 'services';
     else if (currentPath == '/cloud-solutions') return 'services';
@@ -31,26 +33,26 @@ function App() {
 
   const paths = [
     { name: 'Home', element: <Home className={marginTop} setCurrent={setCurrent} />, path: '/' },
-    { name: 'Web Design', element: <Webdev className={marginTop} />, path: '/web-design/' },
-    { name: 'Cloud Solutions', element: <Cloud />, path: '/cloud-solutions/' },
-    { name: 'Devops', element: <Devops />, path: '/devops/' },
-    { name: 'Contact Us', element: <Contact />, path: '/contact' },
+    { name: 'Web Design', element: <Webdev className={marginTop} setCurrent={setCurrent} />, path: '/web-design/' },
+    { name: 'Cloud Solutions', element: <Cloud className={marginTop}/>, path: '/cloud-solutions/' },
+    { name: 'Devops', element: <Devops className={marginTop}/>, path: '/devops/' },
+    { name: 'Contact Us', element: <Contact className={marginTop}/>, path: '/contact' },
     { name: 'Our Work', element: <OurWork className={marginTop} />, path: '/our-work/' },
-    { name: 'About Us', element: <About />, path: '/about/' },
+    { name: 'About Us', element: <About className={marginTop}/>, path: '/about/' },
   ]
 
   return (
-    <div className='h-full'>
-      <Router className="bg-black">
-        <Navbar current={current} setCurrent={(current) => setCurrent(current)} />
-        <Routes>
-          {paths.map((path) => {
-            return <Route path={path.path} element={path.element} />
-          })}
-        </Routes>
-        <Footer current={current} setCurrent={(current) => setCurrent(current)} />
-      </Router>
-    </div>
+    <Router className='black'>
+      <ScrollToTop />
+      <Navbar current={current} setCurrent={(current) => setCurrent(current)} />
+      <Routes>
+        {paths.map((path) => {
+          return <Route path={path.path} element={path.element} />
+        })}
+      </Routes>
+      <Footer current={current} setCurrent={(current) => setCurrent(current)} />
+      
+    </Router>
   );
 }
 

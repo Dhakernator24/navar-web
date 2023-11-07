@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from 'react';
-import image_good from '../assets/web_page_image.jpg';
+import david from '../assets/david.jpg'
+import solutions_aws from '../assets/solutions_aws.png'
 
-export default function About() {
+export default function About({className}) {
 
     const paraStyle = ''
 
     return (
-        <div className='min-h-[calc(100vh-80px)] mt-[80px]'>
+        <div className={`${className} min-h-[calc(100vh-80px)]`}>
             <div className='font-oxygen text-logo flex flex-col w-full'>
                 <div className='bg-logo-secLight w-full h-fit py-10 pl-20 border-b-[4px] border-logo'>
                     <h1 className='lg:text-4xl text-2xl font-bold'>OUR STORY</h1>
@@ -51,8 +52,13 @@ export default function About() {
                                 Fluent in both Spanish and English, David approaches his work with an unyielding work ethic and an uncompromising dedication to quality. He considers no job complete until the client's satisfaction stands at an unequivocal 100%. With every project, David's singular focus remains on delivering solutions of exceptional caliber, a hallmark of his character and the cornerstone of Navar Solutions' success.
                             </p>
                         </div>
-                        <div className='h-[300px] w-[300px] bg-logo bg-cover bg-center rounded-full'
-                            style={{ backgroundImage: `url(${image_good})` }} />
+                        <div className='flex flex-col w-[40%] flex-grow items-center gap-10'>
+                            <div className='h-[300px] w-[300px] bg-logo bg-cover bg-center rounded-full'
+                                style={{ backgroundImage: `url(${david})` }} />
+                            <div className='h-[150px] w-[150px] bg-cover bg-center rounded-full'
+                                style={{ backgroundImage: `url(${solutions_aws})` }} />
+                        </div>
+
 
                     </div>
                 </div>
