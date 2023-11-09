@@ -26,13 +26,13 @@ export default function Webdev({ className, setCurrent }) {
     return (
         <div className={`${className} min-h-[calc(100vh-80px)] h-full w-full`}>
             <div className='font-oxygen text-logo flex flex-col w-full'>
-                <div className='bg-logo-secLight w-full pl-20 py-10 h-fit border-b-[4px] border-logo'>
+                <div className='bg-logo-secLight w-full pl-16 py-10 h-fit border-b-[4px] border-logo'>
                     <h1 className='text-4xl font-bold'>WEB DESIGN & CUSTOM WEBSITES</h1>
                     <h2 className='text-2xl font-extralight'>Empowering Small and Midsize Businesses Online</h2>
                 </div>
 
 
-                <div className='w-full h-full mt-10 px-20 flex flex-row gap-10'>
+                <div className='w-full h-full mt-10 px-16 flex flex-row gap-10'>
                     <img src={webDesign} className='w-[400px] h-fit' />
 
                     <div className='flex flex-col justify-center items-start flex-grow'>
@@ -45,11 +45,11 @@ export default function Webdev({ className, setCurrent }) {
 
 
 
-                <div className='flex flex-row w-full mt-20 pl-20 justify-start items-center'>
+                <div className='flex flex-row w-full mt-20 pl-16 justify-start items-center'>
                     <div className='w-3 h-8 bg-logo-second' />
                     <h3 className='text-xl ml-4 mb-0 font-bold'>Our Comprehensive Web Design Services</h3>
                 </div>
-                <ul className='flex flex-col gap-8 mt-6 pl-16 mx-12 w-full'>
+                <ul className='flex flex-col gap-8 mt-6 pl-12 mx-12 w-full'>
                     {web_services.map((elem, index) => {
                         return <li className='flex flex-col w-3/4'>
                             <h4 className='text-lg underline decoration-2 decoration-logo'>{elem.title}</h4>
@@ -57,7 +57,7 @@ export default function Webdev({ className, setCurrent }) {
                         </li>
                     })}
                 </ul>
-                <div className='flex flex-col pl-20 mt-20'>
+                <div className='flex flex-col px-16 mt-20'>
                     <div className='flex flex-row w-full justify-start items-center'>
                         <div className='w-3 h-8 bg-logo-second' />
                         <h3 className='text-xl ml-4 mb-0 font-bold'>Explore Our Portfolio</h3>
@@ -76,7 +76,7 @@ export default function Webdev({ className, setCurrent }) {
 
                 </div>
 
-                <div className='flex flex-col pl-20 my-20'>
+                <div className='flex flex-col px-16 my-20'>
                     <div className='flex flex-row w-full justify-start items-center'>
                         <div className='w-3 h-8 bg-logo-second' />
                         <h3 className='text-xl ml-4 mb-0 font-bold'>Ready to Elevate Your Online Presence?</h3>

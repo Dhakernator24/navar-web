@@ -12,6 +12,7 @@ import Footer from './Navigation/Footer';
 import { Fragment, useState } from 'react'
 import OurWork from './pages/OurWork';
 import ScrollToTop from './Navigation/ScrollToTop';
+import Privacy from './pages/Privacy';
 
 function App() {
   const [current, setCurrent] = useState(() => {
@@ -39,6 +40,7 @@ function App() {
     { name: 'Contact Us', element: <Contact className={marginTop}/>, path: '/contact' },
     { name: 'Our Work', element: <OurWork className={marginTop} />, path: '/our-work/' },
     { name: 'About Us', element: <About className={marginTop}/>, path: '/about/' },
+    { name: 'Privacy Policy', element: <Privacy className={marginTop}/>, path: '/privacy-policy' },
   ]
 
   return (

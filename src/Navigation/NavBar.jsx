@@ -46,13 +46,13 @@ export default function NavBar({current, setCurrent}) {
   
 
   return (
-    <div className="bg-white z-10 fixed top-0 w-full max-h-[80px]">
-      <nav className="sticky top-0 mx-auto text-logo-main flex items-center justify-between h-auto px-3 lg:px-8" aria-label="Global">
+    <div className="bg-white z-10 flex flex-grow justify-center items-center fixed top-0 w-full max-h-[80px] h-[80px]">
+      <nav className="sticky w-full top-0 text-logo-main flex items-center justify-between h-full px-16" aria-label="Global">
         {
           //logo
         }
-        <div className="flex 2xl:justify-center 2xl:pr-48 lg:flex-1">
-          <a href="/" scroll={true} onClick={() => setCurrent("home")} className="">
+        <div className="flex -ml-4">
+          <a href="/" onClick={() => setCurrent("home")} className="">
             <img className="h-16 w-42" src={logo} alt="" />
           </a>
         </div>
@@ -72,14 +72,14 @@ export default function NavBar({current, setCurrent}) {
         {
           //navBar elements desktop
         }
-        <Popover.Group className="hidden lg:flex lg:gap-x-12 ">
+        <Popover.Group className="hidden lg:flex lg:gap-x-12 h-full">
           {
             //navBar DropDown
           }
           {navBarElements.map(item => {
             if (item.name == 'Services') {
               return <Popover className="relative group">
-                <Popover.Button className=" py-4 focus:outline-none" onClick={() => setCurrent(item.current)}>
+                <Popover.Button className="h-full focus:outline-none" onClick={() => setCurrent(item.current)}>
                   <div className="transition ease-in-out duration-500 font-oxygen flex items-center gap-x-1 text-base font-semibold leading-6 text-gray-900">
                     <span className="text-base font-oxygen text-logo-main font-semibold leading-6 no-underline "> {item.name} </span>
                     <ChevronDownIcon className="h-5 w-5 flex-none text-gray-400" aria-hidden="true" />
@@ -137,7 +137,7 @@ export default function NavBar({current, setCurrent}) {
                 </Transition>
               </Popover>
             } else {
-              return <a href={item.href} onClick={() => setCurrent(item.current)} className='group transition duration-300 py-4 no-underline' >
+              return <a href={item.href} onClick={() => setCurrent(item.current)} className='flex flex-col justify-center group transition duration-300 h-full no-underline' >
                 <span className="text-base font-oxygen text-logo-main font-semibold leading-6 no-underline "> {item.name} </span>
                 {current == item.current &&
                   <div className='bg-logo-second mt-2 h-1 max-w-full' /> ||
@@ -154,10 +154,10 @@ export default function NavBar({current, setCurrent}) {
         {
           //Language
         }
-        <a href='/es/' className="no-underline hidden 2xl:pl-48 lg:flex font-semibold items-center justify-between 2xl:justify-center lg:flex-1 lg:justify-end">
+        {/* <a href='/es/' className="no-underline hidden lg:flex w-fit items-center h-full justify-center">
           <span className='font-oxygen text-logo no-underline'>ENG</span>
           <img className="h-6 w-12 mx-2" src={flag} alt="" />
-        </a>
+        </a> */}
 
       </nav>
       <Dialog as="div" className="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
@@ -224,12 +224,12 @@ export default function NavBar({current, setCurrent}) {
                   }
                 })}
               </div>
-              <div className="py-6 px-3">
+              {/* <div className="py-6 px-3">
                 <a href='/es/' className="no-underline flex font-semibold items-center justify-start">
                   <span className='font-oxygen text-logo no-underline'>ENG</span>
                   <img className="h-3 w-auto mx-2" src={flag} alt="" />
                 </a>
-              </div>
+              </div> */}
             </div>
           </div>
         </Dialog.Panel>

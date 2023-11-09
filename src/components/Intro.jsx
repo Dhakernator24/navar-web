@@ -3,19 +3,15 @@ import IntroCard from "./IntroCard.jsx";
 const columns = [
 	{
 		title: 'Who we are',
-		description: 'Led by Devops Engineer and AWS Solutions Architect young entrepeneur David Navarro. Navar is \
-    dedicated to deliver high quality and low cost solutions to small and large business looking to grow and update',
+		description: 'Led by David Navarro, a driven entrepreneur and accomplished DevOps Engineer, as well as an AWS Solutions Architect, Navar is fervently committed to providing both small and large enterprises with high-caliber, cost-effective solutions tailored to foster growth and modernization.',
 	},
   {
 		title: 'What we do',
-		description: 'We specialize in building software for you, because we know your business is important to you, \
-    therefore it is important to us. We want to help you transmit your values and your mission as a business to the\
-     public in the best way possible',
+		description: 'We excel in the development of tailored software solutions, recognizing the paramount significance of your business to you. Consequently, it holds equal importance to us. Our primary objective is to assist you in effectively conveying your core values and business mission to the public, employing the highest standards of excellence.',
 	},
   {
 		title: 'Our principles',
-		description: 'We believe that websites and other software solutions should be available for anyone, no matter the technology background. \
-    All businesses should have affordable and state of the art technology regardless of its size or niche',
+		description: 'We maintain the steadfast belief that websites and other software solutions should be accessible to all, irrespective of one\'s technological proficiency. We are committed to ensuring that every business, regardless of its scale or industry, has access to cost-effective, cutting-edge technology solutions.',
 	},
 ]
 
