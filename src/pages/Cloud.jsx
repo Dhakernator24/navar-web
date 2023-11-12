@@ -82,9 +82,9 @@ export default function Cloud({ className, setCurrent }) {
                 </div>
 
                 <div className='h-fit flex flex-row justify-evenly items-center my-4 lg:mt-12'>
-                    <img src={aws} className='w-[80px] md:w-[100px] lg:w-[200] h-fit' />
-                    <img src={azure} className='w-[150px] md:w-[200px] lg:w-[200] h-fit -mr-5' />
-                    <img src={gcp} className='w-[100px] md:w-[150px] lg:w-[200] h-fit' />
+                    <img src={aws} className='w-[80px] md:w-[100px] lg:w-[200] h-auto' />
+                    <img src={azure} className='w-[150px] md:w-[200px] lg:w-[200] h-auto -mr-5' />
+                    <img src={gcp} className='w-[100px] md:w-[150px] lg:w-[200] h-auto' />
                 </div>
 
                 <div className='w-full pl-3 lg:pl-8 pr-3 lg:pr-0 mb-20'>
