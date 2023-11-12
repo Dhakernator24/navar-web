@@ -15,7 +15,7 @@ function ServiceCard({ name, subtitle, description, iconS, href, setCurrent }) {
 			className="flex flex-col h-full bg-logo-white text-center border-[1px] border-logo-second font-oxygen w-full lg:hover:shadow-2xl transition duration-200 ease-in"
 		>
 			<div className="w-full pt-3 pb-2 border-b border-logo-second">
-				<h2 className="font-bold text-3xl text-logo-main">
+				<h2 className="font-bold text-2xl lg:text-3xl text-logo-main">
 					{name}
 				</h2>
 				<p className="text-logo-light text-sm ">

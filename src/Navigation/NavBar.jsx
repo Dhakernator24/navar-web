@@ -43,7 +43,7 @@ export default function NavBar({current, setCurrent}) {
   
 
   return (
-    <div className="bg-white z-10 flex flex-grow justify-center items-center fixed top-0 w-full max-h-[80px] h-[80px]">
+    <div className="bg-white z-10 flex flex-grow justify-center items-center fixed top-0 w-full max-h-[80px] h-[80px] shadow-xl">
       <nav className="sticky w-full top-0 text-logo-main flex items-center justify-between h-full px-4 lg:px-16" aria-label="Global">
         {
           //logo

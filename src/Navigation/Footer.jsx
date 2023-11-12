@@ -26,7 +26,7 @@ function Footer({ current, setCurrent }) {
 
   return (
     <>
-      <footer class="flex bg-logo-secLight bottom-0 font-oxygen h-fit w-full py-4 px-4">
+      <footer class="flex bg-logo-secLight bottom-0 font-oxygen h-fit w-full py-4 px-4 border-t-2 border-logo">
 
         <div class="flex lg:flex-row flex-col gap-10 w-full items-center md:items-start">
 

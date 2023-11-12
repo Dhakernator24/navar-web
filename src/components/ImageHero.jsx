@@ -14,7 +14,7 @@ function ImageHero({setCurrent}) {
 			bg-center bg-no-repeat text-white">
 			<div className="flex h-full w-full self-center md:pl-16 items-center">
 				<div className='flex flex-col justify-center items-center md:items-start gap-10 w-full'>
-					<div className="med:text-start text-center">
+					<div className="md:text-start [text-align:center]">
 						<h1 className="text-7xl font-light text-logo-white font-oxygen mb-4 ">
 							<span className='text-logo-second'>S</span>oftware <span className='text-logo-second'>S</span>pecialists</h1>
 						<p className="text-2xl text-logo-white font-oxygen">Your business matters</p>

@@ -27,7 +27,7 @@ const services = [
 	},
 	{
 		name: 'Cloud Solutions',
-		subtitle: 'We develop, your life becomes easier',
+		subtitle: 'Upgrade your infrastructure to the latests',
 		description:
 			<ul className='list-disc text-left'>
 				<li>AWS, Azure, GCP</li>
@@ -40,7 +40,7 @@ const services = [
 	},
 	{
 		name: 'Devops',
-		subtitle: 'Deliver faster, cheaper, better',
+		subtitle: 'Deliver faster, cheaper, safer, better',
 		description:
 			<ul className='list-disc text-left'>
 				<li>CICD Implementation</li>
@@ -56,17 +56,16 @@ const services = [
 
 
 
-function Services({setCurrent}) {
+function Services({ setCurrent }) {
 
 
 	return (
-		<div className="w-full h-fit bg-white font-oxygen overflow-hidden px-10">
+		<div className="w-full h-fit bg-white font-oxygen overflow-hidden lg:pl-10 lg:pr-10 pl-3 pr-3">
 			<div className="container mx-auto">
 				<div>
-					<div className="text-center mb-10">
-						<h1 className="font-oxygen text-4xl text-logo-main">
-							Our Services
-						</h1>
+					<div className='flex flex-row w-full lg:justify-center items-center mb-16 gap-4'>
+						<div className='w-3 h-10 bg-logo-second' />
+						<div className="text-logo text-4xl font-bold font-oxygen">Our Services</div>
 					</div>
 					<div
 						className="grid h-full z-0 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-evenly gap-10"
@@ -75,7 +74,7 @@ function Services({setCurrent}) {
 							<ServiceCard
 								name={service.name}
 								subtitle={service.subtitle}
-								iconS={<service.icon className='w-1/4 h-auto text-logo-main'/>}
+								iconS={<service.icon className='w-1/4 h-auto text-logo-main' />}
 								description={service.description}
 								href={service.href}
 								setCurrent={setCurrent}
