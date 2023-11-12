@@ -10,68 +10,49 @@ const classNameIcons = "no-underline text-logo hover:opacity-75"
 
 const classNameTitles = "font-bold text-xl"
 
-const company = [
-
-  { name: 'Home', href: '/', current: 'home' },
-  { name: 'About Us', href: '/about', current: 'about' },
-  { name: 'Our Work', href: '/work', current: 'work' },
-  { name: 'Contact', href: '/contact', current: 'contact' },
-  //{ name: 'Reviews', href: 'reviews'},
-]
-
-const services = [
-
-  { name: 'Web Design', href: '/web', current: 'home' },
-  { name: 'Software Solutions', href: '/software', current: 'about' },
-  { name: 'Devops', href: '/devops', current: 'work' },
-  { name: 'Learn More', href: '/contact', current: 'contact' },
-  //{ name: 'Reviews', href: 'reviews'},
-]
 
 const footerItems = [
 
   { name: 'Home', href: '/', current: 'home' },
+  { name: 'Web Design', href: '/web-design', current: 'services' },
+  { name: 'Cloud Solutions', href: '/cloud-solutions', current: 'services' },
+  { name: 'Devops', href: '/devops', current: 'services' },
   { name: 'About Us', href: '/about', current: 'about' },
-  { name: 'Our Work', href: '/work', current: 'work' },
-  { name: 'Contact', href: '/contact', current: 'contact' },
-  { name: 'Web Design', href: '/web', current: 'home' },
-  { name: 'Software Solutions', href: '/software', current: 'about' },
-  { name: 'Devops', href: '/devops', current: 'work' },
+  { name: 'Our Work', href: '/our-work', current: 'work' },
   { name: 'Contact', href: '/contact', current: 'contact' },
 ]
 
 function Footer({ current, setCurrent }) {
 
   return (
-    <footer class="bg-logo-secLight bottom-0 font-oxygen h-fit">
-      <div class="max-w-screen-xl py-4 mx-auto">
-        <div class="flex flex-col lg:flex-row lg:justify-between gap-10 lg:gap-0 mx-16">
-          <div className='flex flex-col w-[40%]'>
-            <a href="/" className="-ml-6 -my-4">
+    <>
+      <footer class="flex bg-logo-secLight bottom-0 font-oxygen h-fit w-full py-4 px-4">
+
+        <div class="flex lg:flex-row flex-col gap-10 w-full items-center md:items-start">
+
+          <div className='flex flex-col lg:w-[30%] md:w-full w-fit md:items-start items-center'>
+            <a href="/" className="md:-ml-[22px] -my-4">
               <img className="h-20 w-auto" src={logo} alt="" />
             </a>
 
-            <p class="text-xs text-logo">
+            <p class="text-xs text-logo w-fit mb-0">
               © 2023 Navar Solutions LLC, All rights reserved
             </p>
-            <a className={`${classNameLinks} font-bold`} href='/privacy-policy'> Privacy Policy </a>
+            <a className={`${classNameLinks} font-bold md:mt-5`} href='/privacy-policy'> Privacy Policy </a>
           </div >
 
-          <div className='flex flex-row justify-start gap-20 w-full'>
-            <nav class="flex flex-row justify-evenly w-full h-full items-center">
-              {footerItems.map(item => {
-                return <a
-                  href={item.href}
-                  onClick={() => setCurrent(item.current)}
-                  className={classNameLinks}> {item.name}</a>
-              })}
-            </nav>
-          </div>
+          <nav class="grid grid-cols-2 md:flex flex-row justify-between lg:justify-evenly w-full h-full items-center">
+            {footerItems.map(item => {
+              return <a
+                href={item.href}
+                onClick={() => setCurrent(item.current)}
+                className={`${classNameLinks} md:text-left text-center md:w-fit w-full`}> {item.name}</a>
+            })}
+          </nav>
 
         </div>
-      </div>
-
-    </footer>
+      </footer>
+    </>
   )
 }
 

@@ -9,9 +9,6 @@ import {
 } from '@heroicons/react/24/outline'
 import { ChevronDownIcon, PhoneIcon, PlayCircleIcon } from '@heroicons/react/20/solid'
 import logo from '../assets/navarIconNoBg.png';
-import flag from '../assets/bandera-usa.png'
-import { Link } from 'react-router-dom';
-
 
 
 const products = [
@@ -47,7 +44,7 @@ export default function NavBar({current, setCurrent}) {
 
   return (
     <div className="bg-white z-10 flex flex-grow justify-center items-center fixed top-0 w-full max-h-[80px] h-[80px]">
-      <nav className="sticky w-full top-0 text-logo-main flex items-center justify-between h-full px-16" aria-label="Global">
+      <nav className="sticky w-full top-0 text-logo-main flex items-center justify-between h-full px-4 lg:px-16" aria-label="Global">
         {
           //logo
         }

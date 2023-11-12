@@ -37,7 +37,7 @@ function ServiceCard({ name, subtitle, description, iconS, href, setCurrent }) {
 						href={href}
 						onClick={() => setCurrent('services')}
 						className="w-full block bg-logo-main text-logo-second no-underline font-medium 
-												text-xl py-4 hover:shadow-lg hover:text-logo-main transition duration-200 ease-in-out hover:bg-logo-secLight"
+												text-xl py-4 lg:hover:shadow-lg lg:hover:text-logo-main transition duration-200 ease-in-out lg:hover:bg-logo-secLight"
 					>Learn More
 					</a>
 				</div>

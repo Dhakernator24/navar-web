@@ -35,7 +35,7 @@ export default function Devops({ className, setCurrent }) {
         },
     ]
 
-    const iconStyle = 'w-10 h-10 text-logo'
+    const iconStyle = 'w-20 h-20 md:w-14 md:h-14 lg:w-10 lg:h-10'
     const web_services = [
         {
             title: "Continuous Integration and Continuous Deployment (CI/CD)",
@@ -60,7 +60,7 @@ export default function Devops({ className, setCurrent }) {
         {
             title: "Automated Testing and Quality Assurance",
             text: "Achieve higher quality software through automated testing strategies. We help you implement robust testing frameworks and methodologies to identify and rectify issues early in the development process.",
-            icon: <TbTestPipe className={`${iconStyle}`}/>
+            icon: <TbTestPipe className={`${iconStyle}`} />
         },
         {
             title: "Performance Optimization",
@@ -82,61 +82,56 @@ export default function Devops({ className, setCurrent }) {
     return (
         <div className={`${className} min-h-[calc(100vh-80px)] h-full w-full`}>
             <div className='font-oxygen text-logo flex flex-col w-full'>
-                <div className='bg-logo-secLight w-full px-16 py-10 h-fit border-b-[4px] border-logo'>
+                <div className='flex flex-col text-center lg:text-left bg-logo-secLight w-full lg:pl-16 py-10 h-fit border-b-[4px] border-logo'>
                     <h1 className='text-4xl font-bold'>DEVOPS CONSULTING</h1>
                     <h2 className='text-2xl font-extralight'>Your Trusted Partner for DevOps Excellence</h2>
                 </div>
 
-                <div className='w-[80%] h-fit px-16 my-20 font-bold text-xl'> At Navar Solutions, we specialize in providing comprehensive DevOps solutions and consulting services tailored to meet the unique needs of your organization. With a team of seasoned experts, we are dedicated to helping businesses achieve seamless integration, automation, and efficiency in their software development and operations processes.</div>
 
-
-                <div className='flex flex-row w-full px-16 justify-start items-center'>
-                    <div className='w-3 h-8 bg-logo-second' />
-                    <h3 className='text-xl ml-4 mb-0 font-bold'>Our Cloud Services Offering</h3>
+                <div className='w-full text-center h-fit px-3 lg:px-16 my-10 md:my-20 font-bold text-base md:text-xl'>
+                    At Navar Solutions, we specialize in providing comprehensive DevOps solutions and consulting services tailored to meet the unique needs of your organization.
                 </div>
-                <ul className='flex flex-col justify-center mt-6 pl-12 mx-12 w-full divide-y-logo divide-y-2'>
-                    {web_services.map((elem, index) => {
-                        return <li className='flex flex-row justify-center items-center w-3/4 h-full gap-5 py-4'>
-                            {elem.icon}
-                            <div className='flex flex-col w-full h-full'>
-                                <h4 className='text-lg underline decoration-2 decoration-logo'>{elem.title}</h4>
-                                <p className='text-base'>{elem.text}</p>
-                            </div>
 
-                        </li>
-                    })}
-                </ul>
-                
 
-                <div className='w-full h-full mt-10 px-16 flex flex-col gap-10'>
+                <div className='w-full pl-3 lg:pl-8 pr-3 lg:pr-0 mb-20'>
 
-                    <div className='flex flex-col justify-center items-start flex-grow'>
-                        <div className='flex flex-row w-full mb-4 justify-start items-center'>
-                            <div className='w-3 h-8 bg-logo-second' />
-                            <h3 className='text-xl ml-4 mb-0 font-bold'>Why Choose Navar Solutions?</h3>
-                        </div>
-                        <div className='flex flex-row'>
-                            {/* <img src={building} className='mt-2 h-[100px] w-auto shadow-lg object-cover flex-grow' /> */}
-                            <ul className='flex flex-col w-full'>
+                    <div className='flex flex-row w-full justify-start items-center'>
+                        <div className='w-3 h-8 bg-logo-second' />
+                        <h3 className='text-xl ml-4 mb-0 font-bold'>Our DevOps Expertise</h3>
+                    </div>
+                    <ul className='flex flex-col justify-center mt-6 pl-0 md:px-12 lg:px-12 w-full divide-y-logo divide-y-2'>
+                        {web_services.map((elem, index) => {
+                            return <li className='flex flex-col md:flex-row justify-center items-center lg:w-3/4 h-full gap-5 py-4'>
+                                {elem.icon}
+                                <div className='flex flex-col w-full h-full [text-align:center] md:text-left'>
+                                    <h4 className='text-lg font-bold pb-3'>{elem.title}</h4>
+                                    <p className='text-base'>{elem.text}</p>
+                                </div>
+                            </li>
+                        })}
+                    </ul>
+
+                    <div className='flex flex-row w-full mb-4 justify-start items-center'>
+                        <div className='w-3 h-8 bg-logo-second' />
+                        <h3 className='text-xl ml-4 mb-0 font-bold'>Why Choose Navar Solutions?</h3>
+                    </div>
+                    <div className='flex flex-row'>
+                        {/* <img src={building} className='mt-2 h-[100px] w-auto shadow-lg object-cover flex-grow' /> */}
+                        <ul className='flex flex-col w-full'>
                             {reasons.map((elem, index) => {
                                 return <li className='flex flex-col  w-full'>
-                                    <h4 className='text-lg underline decoration-2 decoration-logo'>{elem.title}</h4>
+                                    <h4 className='text-lg font-bold'>{elem.title}</h4>
                                     <p className='text-base'>{elem.text}</p>
                                 </li>
                             })}
-                            </ul>
-                        </div>
-
+                        </ul>
                     </div>
 
-                    <div className='pl-8 font-bold'>
-                    At Navar Solutions, we don't just deliver solutions; we build lasting partnerships. Our commitment to your success goes beyond the project, as we continue to evolve with your business and adapt to your changing needs. When you choose Navar Solutions, you're choosing a trusted ally in your journey towards DevOps excellence.
+                    <div className='pl-8 font-bold mt-6'>
+                        At Navar Solutions, we don't just deliver solutions; we build lasting partnerships. Our commitment to your success goes beyond the project, as we continue to evolve with your business and adapt to your changing needs. When you choose Navar Solutions, you're choosing a trusted ally in your journey towards DevOps excellence.
                     </div>
 
-                </div>
-
-                <div className='flex flex-col pl-20 my-20'>
-                    <div className='flex flex-row w-full justify-start items-center'>
+                    <div className='flex flex-row w-full justify-start items-center mt-20'>
                         <div className='w-3 h-8 bg-logo-second' />
                         <h3 className='text-xl ml-4 mb-0 font-bold'>Ready to Elevate Your Online Presence?</h3>
                     </div>
@@ -153,8 +148,11 @@ export default function Devops({ className, setCurrent }) {
 
                 </div>
             </div>
-
         </div>
+
+
+
+
     );
 
 }

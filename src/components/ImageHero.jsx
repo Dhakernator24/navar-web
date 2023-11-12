@@ -12,14 +12,10 @@ function ImageHero({setCurrent}) {
 			}}
 			className="flex shadow-2xl my-[80px] h-[calc(100vh-80px)] w-auto bg-cover 
 			bg-center bg-no-repeat text-white">
-			<div className="flex h-full w-full self-center lg:pl-16 md:pl-5 sm:pl-0">
-				<div className='flex flex-col justify-center items-start gap-10'>
-					<div
-						// style={{
-						// 	background: `radial-gradient(circle, rgba(0,40,63,1) 30%, rgba(159,174,183,1) 100%)`
-						// }}
-						className="">
-						<h1 className="text-7xl font-light text-logo-white font-oxygen mb-4">
+			<div className="flex h-full w-full self-center md:pl-16 items-center">
+				<div className='flex flex-col justify-center items-center md:items-start gap-10 w-full'>
+					<div className="med:text-start text-center">
+						<h1 className="text-7xl font-light text-logo-white font-oxygen mb-4 ">
 							<span className='text-logo-second'>S</span>oftware <span className='text-logo-second'>S</span>pecialists</h1>
 						<p className="text-2xl text-logo-white font-oxygen">Your business matters</p>
 					</div>
@@ -27,7 +23,7 @@ function ImageHero({setCurrent}) {
 						onClick={() => setCurrent("contact")}
 						href='/contact'
 						className="w-[200px] blockfont-oxygen  no-underline text-center
-							text-xl font-bold py-4 border-[1px] border-logo-white text-logo-white [background-color:transparent] hover:border-logo-secLight hover:text-logo hover:bg-logo-secLight transition-all duration-300"
+							text-xl font-bold py-4 border-[1px] border-logo-white text-logo-white [background-color:transparent] lg:hover:border-logo-secLight lg:hover:text-logo lg:hover:bg-logo-secLight transition-all duration-300"
 					>Contact Us!
 					</a>
 				</div>

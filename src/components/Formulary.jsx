@@ -71,8 +71,7 @@ export default function Formulary() {
     // console.log(formData);
 
     // Submit form data to a specific URL
-    const url = 'https://nocodeform.io/f/652f1e5c4081185a963d2639';
-    //const url = 'localhost:3006/kostianis-web'
+    const url = 'https://nocodeform.io/f/654f1741d39a01f7246e849c';
     const formData = {
       firstName: firstName,
       lastName: lastName,
@@ -114,134 +113,127 @@ export default function Formulary() {
   return (
     <>
       {!isSent &&
-        <div className="w-[60%] flex items-start justify-start px-12 pt-10 pb-12">
-          <div className="w-full max-w-[550px]">
-            <div className='text-lg mb-10 font-oxygen font-semibold text-black'>
-              Or if you prefer we will contact you:
-            </div>
-            <form onSubmit={handleSubmit}>
-              <div className="flex flex-row gap-3">
-                <div className="w-full sm:w-1/2">
-                  <div className="mb-4">
-                    <label
-                      htmlFor="fName"
-                      className={`${titleStyles}`}
-                    >
-                      First Name
-                    </label>
-                    <input
-                      type="text"
-                      name="fName"
-                      id="fName"
-                      placeholder="First Name"
-                      value={firstName}
-                      onChange={handleNameChange}
-                      required
-                      className={`${boxStyles}`}
-                    />
-                  </div>
-                </div>
-                <div className="w-full sm:w-1/2">
-                  <div className="mb-4">
-                    <label
-                      htmlFor="lName"
-                      className={`${titleStyles}`}
-                    >
-                      Last Name
-                    </label>
-                    <input
-                      type="text"
-                      name="lName"
-                      id="lName"
-                      placeholder="Last Name"
-                      value={lastName}
-                      onChange={handleLastNameChange}
-                      required
-                      className={`${boxStyles}`}
-                    />
-                  </div>
-                </div>
-              </div>
-              <div className="mb-4">
-                <label
-                  htmlFor="email"
-                  className={`${titleStyles}`}>
-                  Email
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  placeholder="Email"
-                  className={`${boxStyles} ${!emailValid && 'border-red-500'
-                    }`}
-                  value={email}
-                  onChange={handleEmailChange}
-                  required
-                />
-                {!emailValid && (
-                  <p className="text-red-500 font-oxygen text-xs mt-1">Please enter a valid email</p>
-                )}
-              </div>
-              <div className="mb-4">
-                <label
-                  htmlFor="phone"
-                  className={`${titleStyles}`}>
-                  Phone Number
-                </label>
-                <input
-                  type="tel"
-                  id="phone"
-                  placeholder='Phone Number'
-                  className={`${boxStyles} ${!emailValid && 'border-red-500'
-                    }`}
-                  value={phone}
-                  onChange={handlePhoneChange}
-                  required
-                />
-                {!phoneValid && (
-                  <p className="text-red-500 font-oxygen text-xs mt-1">
-                    Please enter a valid 10-digit phone number
-                  </p>
-                )}
-              </div>
-              <div className='mb-4'>
-                <label
-                  htmlFor='msg'
-                  className={`${titleStyles}`}>
-                  What can we help you with?
-                </label>
-                <textarea
-                  type="text"
-                  id='msg'
-                  placeholder='Brief description (optional)'
-                  className={`${boxStyles}`}
-                  value={message}
-                  onChange={handleMessageChange}
-                  rows="5"
-                />
-              </div>
-              {!formOk && <div className='text-red-700 font-oxygen text-xl'>
-                Something went wrong, please try again later
-              </div>
-              }
-              <div className="mt-4 flex flex-row justify-start items-center">
-                <div className='inline-block relative w-[125px] h-[54px]'>
-                  <button
-                    className="absolute top-0 left-0 font-oxygen font-semibold border-[3px] text-base  py-3 px-8 text-center border-logo hover:bg-logo-secLight hover:text-logo outline-none
-                   bg-logo text-logo-second transition-all duration-300"
-                    type='submit'
+        <div className="w-full lg:w-[60%] flex flex-col px-12 pt-10 pb-12">
+          <div className='text-lg [text-align:center] lg:text-left mb-10 font-oxygen font-semibold text-black'>
+            Or if you prefer we will contact you:
+          </div>
+          <form onSubmit={handleSubmit} className='flex flex-col'>
+            <div className="flex flex-row gap-3">
+              <div className="w-full sm:w-1/2">
+                <div className="mb-4">
+                  <label
+                    htmlFor="fName"
+                    className={`${titleStyles}`}
                   >
-                    Submit
-                  </button>
+                    First Name
+                  </label>
+                  <input
+                    type="text"
+                    name="fName"
+                    id="fName"
+                    placeholder="First Name"
+                    value={firstName}
+                    onChange={handleNameChange}
+                    required
+                    className={`${boxStyles}`}
+                  />
                 </div>
-
-
-
               </div>
-            </form>
-          </div >
-        </div > ||
-        <div className='text-4xl text-black font-oxygen font-extrabold my-32'>Thank you we will contact you soon</div>
+              <div className="w-full sm:w-1/2">
+                <div className="mb-4">
+                  <label
+                    htmlFor="lName"
+                    className={`${titleStyles}`}
+                  >
+                    Last Name
+                  </label>
+                  <input
+                    type="text"
+                    name="lName"
+                    id="lName"
+                    placeholder="Last Name"
+                    value={lastName}
+                    onChange={handleLastNameChange}
+                    required
+                    className={`${boxStyles}`}
+                  />
+                </div>
+              </div>
+            </div>
+            <div className="mb-4">
+              <label
+                htmlFor="email"
+                className={`${titleStyles}`}>
+                Email
+              </label>
+              <input
+                type="email"
+                id="email"
+                placeholder="Email"
+                className={`${boxStyles} ${!emailValid && 'border-red-500'
+                  }`}
+                value={email}
+                onChange={handleEmailChange}
+                required
+              />
+              {!emailValid && (
+                <p className="text-red-500 font-oxygen text-xs mt-1">Please enter a valid email</p>
+              )}
+            </div>
+            <div className="mb-4">
+              <label
+                htmlFor="phone"
+                className={`${titleStyles}`}>
+                Phone Number
+              </label>
+              <input
+                type="tel"
+                id="phone"
+                placeholder='Phone Number'
+                className={`${boxStyles} ${!emailValid && 'border-red-500'
+                  }`}
+                value={phone}
+                onChange={handlePhoneChange}
+                required
+              />
+              {!phoneValid && (
+                <p className="text-red-500 font-oxygen text-xs mt-1">
+                  Please enter a valid 10-digit phone number
+                </p>
+              )}
+            </div>
+            <div className='mb-4'>
+              <label
+                htmlFor='msg'
+                className={`${titleStyles}`}>
+                What can we help you with?
+              </label>
+              <textarea
+                type="text"
+                id='msg'
+                placeholder='Brief description (optional)'
+                className={`${boxStyles}`}
+                value={message}
+                onChange={handleMessageChange}
+                rows="5"
+              />
+            </div>
+            {!formOk && <div className='text-red-700 font-oxygen text-xl'>
+              Something went wrong, please try again later
+            </div>
+            }
+            <button
+              className="font-oxygen font-semibold border-[3px] text-base  py-3 px-8 text-center border-logo hover:bg-logo-secLight hover:text-logo outline-none
+                   bg-logo text-logo-second transition-all duration-300 lg:place-self-start place-self-center"
+              type='submit'
+            >
+              Submit
+            </button>
+
+          </form>
+        </div >
+        ||
+        <div className='text-4xl text-black font-oxygen font-extrabold my-auto pl-10 w-[60%]'>Thank you we will contact you soon</div>
       }
 
     </>

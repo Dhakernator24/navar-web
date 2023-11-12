@@ -33,7 +33,8 @@ export default function Cloud({ className, setCurrent }) {
         },
     ]
 
-    const iconStyle = 'w-10 h-10'
+    const iconStyle = 'w-20 h-20 md:w-14 md:h-14 lg:w-10 lg:h-10'
+
     const web_services = [
         {
             title: "Cloud Architecture",
@@ -75,37 +76,34 @@ export default function Cloud({ className, setCurrent }) {
     return (
         <div className={`${className} min-h-[calc(100vh-80px)] h-full w-full`}>
             <div className='font-oxygen text-logo flex flex-col w-full'>
-                <div className='bg-logo-secLight w-full px-16 py-10 h-fit border-b-[4px] border-logo'>
+                <div className='flex flex-col text-center lg:text-left bg-logo-secLight w-full lg:pl-16 py-10 h-fit border-b-[4px] border-logo'>
                     <h1 className='text-4xl font-bold'>CLOUD SOLUTIONS</h1>
                     <h2 className='text-2xl font-extralight'>Empowering Businesses with Agile, Scalable, and Secure Cloud Solutions</h2>
                 </div>
 
-                <div className='h-fit flex flex-row justify-evenly items-center my-12'>
-                    <img src={aws} className='w-[200px] h-fit' />
-                    <img src={azure} className='w-[200px] h-fit' />
-                    <img src={gcp} className='w-[200px] h-fit' />
+                <div className='h-fit flex flex-row justify-evenly items-center my-4 lg:mt-12'>
+                    <img src={aws} className='w-[80px] md:w-[100px] lg:w-[200] h-fit' />
+                    <img src={azure} className='w-[150px] md:w-[200px] lg:w-[200] h-fit -mr-5' />
+                    <img src={gcp} className='w-[100px] md:w-[150px] lg:w-[200] h-fit' />
                 </div>
 
-                <div className='flex flex-row w-full px-16 justify-start items-center'>
-                    <div className='w-3 h-8 bg-logo-second' />
-                    <h3 className='text-xl ml-4 mb-0 font-bold'>Our Cloud Services Offering</h3>
-                </div>
-                <ul className='flex flex-col justify-center mt-6 pl-12 mx-12 w-full divide-y-logo divide-y-2'>
-                    {web_services.map((elem, index) => {
-                        return <li className='flex flex-row justify-center items-center w-3/4 h-full gap-5 py-4'>
-                            {elem.icon}
-                            <div className='flex flex-col w-full h-full'>
-                                <h4 className='text-lg underline decoration-2 decoration-logo'>{elem.title}</h4>
-                                <p className='text-base'>{elem.text}</p>
-                            </div>
+                <div className='w-full pl-3 lg:pl-8 pr-3 lg:pr-0 mb-20'>
+                    <div className='flex flex-row w-full justify-start items-center'>
+                        <div className='w-3 h-8 bg-logo-second' />
+                        <h3 className='text-xl ml-4 mb-0 font-bold'>Our Cloud Services Offering</h3>
+                    </div>
+                    <ul className='flex flex-col justify-center mt-6 pl-0 md:px-12 lg:px-12 w-full divide-y-logo divide-y-2'>
+                        {web_services.map((elem, index) => {
+                            return <li className='flex flex-col md:flex-row justify-center items-center lg:w-3/4 h-full gap-5 py-4'>
+                                {elem.icon}
+                                <div className='flex flex-col w-full h-full [text-align:center] md:text-left'>
+                                    <h4 className='text-lg font-bold pb-3'>{elem.title}</h4>
+                                    <p className='text-base'>{elem.text}</p>
+                                </div>
 
-                        </li>
-                    })}
-                </ul>
-
-
-                <div className='w-full h-full mt-10 px-16 flex flex-col gap-10'>
-
+                            </li>
+                        })}
+                    </ul>
                     <div className='flex flex-col justify-center items-start flex-grow'>
                         <div className='flex flex-row w-full mb-4 justify-start items-center'>
                             <div className='w-3 h-8 bg-logo-second' />
@@ -114,26 +112,22 @@ export default function Cloud({ className, setCurrent }) {
                         <div className='flex flex-row'>
                             {/* <img src={building} className='mt-2 h-[100px] w-auto shadow-lg object-cover flex-grow' /> */}
                             <ul className='flex flex-col w-full'>
-                            {reasons.map((elem, index) => {
-                                return <li className='flex flex-col  w-full'>
-                                    <h4 className='text-lg underline decoration-2 decoration-logo'>{elem.title}</h4>
-                                    <p className='text-base'>{elem.text}</p>
-                                </li>
-                            })}
+                                {reasons.map((elem, index) => {
+                                    return <li className='flex flex-col  w-full'>
+                                        <h4 className='text-lg font-bold'>{elem.title}</h4>
+                                        <p className='text-base'>{elem.text}</p>
+                                    </li>
+                                })}
                             </ul>
                         </div>
 
                     </div>
 
-                    <div className='pl-8 font-bold'>
+                    <div className='pl-8 font-bold pt-10'>
                         Partner with Navar Solutions for unparalleled expertise in cloud solutions.
                     </div>
 
-                </div>
-
-
-                <div className='flex flex-col px-16 my-20'>
-                    <div className='flex flex-row w-full justify-start items-center'>
+                    <div className='flex flex-row w-full justify-start items-center mt-20'>
                         <div className='w-3 h-8 bg-logo-second' />
                         <h3 className='text-xl ml-4 mb-0 font-bold'>Get in Touch for Expert Cloud Solutions</h3>
                     </div>
@@ -147,8 +141,13 @@ export default function Cloud({ className, setCurrent }) {
                             <div className='h-[5px] bg-logo-second group-hover:w-full w-[20%] transition-all duration-300' />
                         </a>
                     </div>
-
                 </div>
+
+
+
+
+                   
+
             </div>
 
         </div>
